@@ -1,3 +1,14 @@
+---
+{
+  "case": 9,
+  "title": "FreeTranscribe.org GPU inference optimization",
+  "started": "2026-08-06",
+  "ended": "2026-08-08",
+  "featured_rank": 2,
+  "summary_markdown": "[FreeTranscribe.org](https://freetranscribe.org/) doubled transcription throughput while sharing one RTX 3090 between live production and autoresearch. Error counts stayed unchanged across 295 broad cases and fell from 105 to 103 on a reviewed long-form set."
+}
+---
+
 # Case 09 - FreeTranscribe.org GPU inference optimization
 
 Observation window: 2026-08-06 through 2026-08-08

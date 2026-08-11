@@ -1,3 +1,13 @@
+---
+{
+  "case": 4,
+  "title": "Gradient Bang headless automation",
+  "started": "2026-04-14",
+  "ended": "2026-04-16",
+  "summary_markdown": "A [Gradient Bang](https://www.gradient-bang.com/) headless client completed live trading, combat, fleet, and exploration workflows and reached contemporaneous visible ranks of 29 in exploration and 27 in trading. Parallel probe agents then began consuming one another's completion events."
+}
+---
+
 # Case 04 - Gradient Bang headless automation
 
 Observation window: 2026-04-14 through 2026-04-16

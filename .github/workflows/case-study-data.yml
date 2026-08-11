@@ -1,0 +1,23 @@
+name: Check case-study data
+
+on:
+  pull_request:
+    paths:
+      - "learnings/case-studies/**"
+      - "scripts/generate_case_studies.py"
+      - ".github/workflows/case-study-data.yml"
+  push:
+    paths:
+      - "learnings/case-studies/**"
+      - "scripts/generate_case_studies.py"
+      - ".github/workflows/case-study-data.yml"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 scripts/generate_case_studies.py --check

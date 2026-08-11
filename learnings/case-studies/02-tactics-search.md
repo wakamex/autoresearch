@@ -1,3 +1,13 @@
+---
+{
+  "case": 2,
+  "title": "Tactics.md policy and action-node search",
+  "started": "2026-03-07",
+  "ended": "2026-04-07",
+  "summary_markdown": "[Tactics.md](https://tactics.md/) used autoresearch to develop and tune its hand-written Greedy and Heuristic agents across more than 24 million simulated games, then test learned action search. One learned model reached 86.7% held-out accuracy but scored only 10% against the simpler Greedy agent because useful actions were pruned before deeper evaluation."
+}
+---
+
 # Case 02 - Tactics.md policy and action-node search
 
 Observation window: 2026-03-07 through 2026-04-07

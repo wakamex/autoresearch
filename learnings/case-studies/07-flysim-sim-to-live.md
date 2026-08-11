@@ -1,3 +1,13 @@
+---
+{
+  "case": 7,
+  "title": "FlySim flight control from simulation to a live application",
+  "started": "2026-07-08",
+  "ended": "2026-07-27",
+  "summary_markdown": "[FlySim](https://github.com/wakamex/flysim) trained flight-control policies in a public JAX simulator, then a private overlay tested a frozen policy in a live external flight application. When a half-second handoff clipped 14% of controls, replaying the exact safety-filtered inputs showed that the simulator underrepresented the live aircraft's roll and yaw response. Retraining fixed the clipping without weakening the live safety limits."
+}
+---
+
 # Case 07 - FlySim flight control from simulation to a live application
 
 Observation window: 2026-07-08 through 2026-07-27

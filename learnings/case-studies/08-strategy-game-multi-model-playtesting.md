@@ -1,3 +1,13 @@
+---
+{
+  "case": 8,
+  "title": "Party-management strategy game playtesting with multiple LLMs",
+  "started": "2026-08-02",
+  "ended": "2026-08-09",
+  "summary_markdown": "A party-management strategy game used six model families as independent playtesters who managed parties, edited character tactics, and revised strategies against a deterministic battle simulator. Their disagreements prevented premature game-design changes, exposed tool-assisted play that violated the rules, and recorded which mechanics the models described as clear, confusing, or engaging."
+}
+---
+
 # Case 08 - Party-management strategy game playtesting with multiple LLMs
 
 Observation window: 2026-08-02 through 2026-08-09

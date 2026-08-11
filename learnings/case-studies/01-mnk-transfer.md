@@ -1,3 +1,13 @@
+---
+{
+  "case": 1,
+  "title": "M,N,K transfer-learning campaign",
+  "started": "2026-02-04",
+  "ended": "2026-02-22",
+  "summary_markdown": "[M,N,K game research](https://github.com/wakamex/mnk) used a Rust and CUDA AlphaZero system to test whether a smaller-board checkpoint could improve learning on a larger board. The checkpoint loaded successfully, but the campaign never established a benefit over matched scratch training, and several promising settings produced a worse and more expensive combined result."
+}
+---
+
 # Case 01 - M,N,K transfer-learning campaign
 
 Observation window: 2026-02-04 through 2026-02-22
