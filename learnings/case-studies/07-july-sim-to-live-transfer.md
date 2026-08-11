@@ -1,7 +1,5 @@
 # Case 07 - Sim-to-live transfer and orchestration
 
-Status: anonymized practitioner case study
-Reviewed: 2026-08-10
 Observation window: 2026-07-08 through 2026-07-27
 Disclosure mode: anonymized
 Duration: several concentrated campaigns across several weeks

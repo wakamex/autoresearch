@@ -1,7 +1,5 @@
 # Case 03 - Stateful performance campaign
 
-Status: anonymized practitioner case study
-Reviewed: 2026-08-10
 Observation window: 2026-03-10 through 2026-03-11
 Disclosure mode: anonymized
 Duration: two calendar days in one continuous intensive campaign

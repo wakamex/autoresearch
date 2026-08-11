@@ -1,7 +1,5 @@
 # Case 06 - Multi-model research governance
 
-Status: anonymized practitioner case study
-Reviewed: 2026-08-10
 Observation window: 2026-06-22 through 2026-07-10
 Disclosure mode: anonymized
 Lifecycle recheck: 2026-08-10

@@ -1,7 +1,5 @@
 # Case 04 - Public headless live automation
 
-Status: reviewed
-Reviewed: 2026-08-10
 Observation window: 2026-04-14 through 2026-04-16
 Disclosure mode: public full-detail
 Project: [Gradient Bang Headless](https://github.com/wakamex/gradient-bang-headless)

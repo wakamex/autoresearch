@@ -1,7 +1,5 @@
 # Contributing autoresearch learnings
 
-Status: active
-Reviewed: 2026-08-10
 Scope: Guidance for extracting transferable autoresearch lessons as anonymized case studies or authorized full-detail public reports.
 
 This repository accepts generalized methodology findings, not private project records. Contributions

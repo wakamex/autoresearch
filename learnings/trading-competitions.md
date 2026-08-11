@@ -1,7 +1,5 @@
 # Trading-competition autoresearch
 
-Status: active
-Reviewed: 2026-08-10
 Scope: Statistical validation, competition mechanics, execution, risk, and promotion criteria for autonomous trading research.
 Case-study basis: None for the competition protocol. Applied trading observations are reported
 separately in Cases 03 and 07 under `case-studies/`.

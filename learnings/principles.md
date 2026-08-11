@@ -1,7 +1,5 @@
 # Durable autoresearch principles
 
-Status: active
-Reviewed: 2026-08-10
 Scope: Cross-domain principles that survived comparison across autonomous research systems, trading competitions, and GPU-backed optimization.
 Case-study basis: All published reports under `case-studies/`.
 External-review basis: `external-review/README.md`.

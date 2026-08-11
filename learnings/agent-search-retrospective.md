@@ -1,7 +1,5 @@
 # Agent-search retrospective
 
-Status: active
-Reviewed: 2026-08-10
 Scope: General workflow lessons about autonomous search, research memory, evaluation, and role specialization.
 Case-study basis: All published reports under `case-studies/`.
 External-review basis: `external-review/README.md`.

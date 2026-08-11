@@ -1,7 +1,5 @@
 # Case 10 - Adaptive search campaign
 
-Status: anonymized practitioner case study
-Reviewed: 2026-08-10
 Observation window: 2026-08-08 through 2026-08-10
 Disclosure mode: anonymized
 Duration: three calendar days, with roughly two days of substantive research

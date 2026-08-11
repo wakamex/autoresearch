@@ -1,7 +1,5 @@
 # External autoresearch review
 
-Status: active
-Reviewed: 2026-08-10
 Scope: Public evidence, source contributions, and attribution limits behind the autoresearch methodology synthesis.
 Evidence boundary: External public sources only. Applied project evidence belongs under `../case-studies/`.
 

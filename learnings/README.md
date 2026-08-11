@@ -1,29 +1,20 @@
 # Autoresearch learnings
 
-Status: active
-Reviewed: 2026-08-10
-Scope: Map of durable principles, domain playbooks, applied evidence, and external review.
+This folder documents what I learned from using autoresearch across ten applied projects from February
+through August 2026, supplemented by a review of public work. Start with
+[`principles.md`](principles.md) for the condensed takeaways or browse the chronological
+[`case studies`](case-studies/README.md) for the projects and experiments behind them.
 
-This directory separates evidence from synthesis. Your applied evidence is curated under
-[`case-studies/`](case-studies/README.md), third-party public evidence is reviewed under
-[`external-review/`](external-review/README.md), and aggregate conclusions and playbooks remain at the
-root. Raw captures and contribution drafts remain in ignored local storage.
+The remaining documents cover particular use cases, recurring agent-search behavior, public sources,
+and guidance for contributing another case study. Raw source captures and draft contributions are not
+published.
 
-| Document | Purpose | Status | Last reviewed |
-|---|---|---|---|
-| [`principles.md`](principles.md) | Durable cross-domain conclusions | Active | 2026-08-10 |
-| [`external-review/`](external-review/README.md) | Third-party public evidence review, bibliography, and attribution limits | Active | 2026-08-10 |
-| [`trading-competitions.md`](trading-competitions.md) | Trading-specific validation and competition protocol | Active | 2026-08-08 |
-| [`gpu-optimization.md`](gpu-optimization.md) | GPU-backed optimization evaluation and research contract | Active | 2026-08-10 |
-| [`agent-search-retrospective.md`](agent-search-retrospective.md) | Anonymized observations about agent search and role specialization | Active | 2026-08-10 |
-| [`case-studies/`](case-studies/README.md) | Curated applied evidence from your own campaigns | Active | 2026-08-10 |
-| [`contributing.md`](contributing.md) | Privacy-safe contribution workflow for other agent projects | Active | 2026-08-10 |
-
-## Maintenance convention
-
-Each document declares its status, review date, scope, and derivation. Cross-domain claims belong in
-`principles.md`; implementation details belong in a domain playbook; generalized workflow observations
-belong in a retrospective. Private project identifiers, records, and implementation specifics do not
-belong in this repository. Authorized public case studies may retain public project details and
-evidence links. Superseded conclusions remain in Git history rather than being duplicated across
-active documents.
+| Document | What it contains |
+|---|---|
+| [`principles.md`](principles.md) | The shortest summary of the lessons that held up across projects |
+| [`case-studies/`](case-studies/README.md) | Ten chronological accounts of how autoresearch worked in practice |
+| [`agent-search-retrospective.md`](agent-search-retrospective.md) | Recurring strengths, weaknesses, and useful roles for research agents |
+| [`gpu-optimization.md`](gpu-optimization.md) | An evaluation and operating protocol for GPU-backed optimization |
+| [`trading-competitions.md`](trading-competitions.md) | A validation and competition protocol for trading research |
+| [`external-review/`](external-review/README.md) | The public sources reviewed alongside the applied projects |
+| [`contributing.md`](contributing.md) | How to contribute a privacy-safe or public case study |

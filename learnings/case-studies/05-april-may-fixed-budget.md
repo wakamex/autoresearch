@@ -1,7 +1,5 @@
 # Case 05 - Fixed-budget optimization campaign
 
-Status: anonymized practitioner case study
-Reviewed: 2026-08-10
 Observation window: 2026-04-15 through 2026-05-08
 Disclosure mode: anonymized
 Duration: several concentrated campaigns across several weeks

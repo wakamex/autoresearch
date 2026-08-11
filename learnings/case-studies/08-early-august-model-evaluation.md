@@ -1,7 +1,5 @@
 # Case 08 - Multi-model evaluation
 
-Status: anonymized practitioner case study
-Reviewed: 2026-08-10
 Observation window: 2026-08-02 through 2026-08-09
 Disclosure mode: anonymized
 Duration: eight calendar days in one highly concentrated campaign

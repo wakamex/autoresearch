@@ -1,7 +1,5 @@
 # GPU-optimization autoresearch
 
-Status: active
-Reviewed: 2026-08-10
 Scope: Evaluation contracts, research loops, safeguards, and operating rules for dependable GPU-backed optimization.
 Case-study basis: Cases 01, 02, 04, and 06 under `case-studies/`, covering performance measurement,
 GPU-backed training and runtime work, accelerated execution, and production-constrained accelerator use.

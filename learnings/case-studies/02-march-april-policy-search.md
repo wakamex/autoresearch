@@ -1,7 +1,5 @@
 # Case 02 - Policy and search optimization
 
-Status: reviewed
-Reviewed: 2026-08-10
 Observation window: 2026-03-07 through 2026-04-07
 Disclosure mode: anonymized
 

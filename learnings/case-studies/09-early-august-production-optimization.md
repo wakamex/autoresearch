@@ -1,7 +1,5 @@
 # Case 09 - Production-constrained optimization
 
-Status: anonymized practitioner case study
-Reviewed: 2026-08-10
 Observation window: 2026-08-06 through 2026-08-08
 Disclosure mode: anonymized
 Duration: three calendar days in one concentrated campaign

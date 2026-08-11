@@ -1,7 +1,5 @@
 # Case 01 - Public transfer-learning campaign
 
-Status: reviewed
-Reviewed: 2026-08-10
 Observation window: 2026-02-04 through 2026-02-22
 Disclosure mode: public full-detail
 Project: [M,N,K Game with AlphaZero Training](https://github.com/wakamex/mnk)
