@@ -1,4 +1,4 @@
-# Case 03 - Tactics.md stateful performance campaign
+# Case 03 - Tactics.md CPU self-play optimization
 
 Observation window: 2026-03-10 through 2026-03-11
 Disclosure mode: named detailed, private repository
@@ -11,10 +11,10 @@ repository owner approved publication of the project name and detailed results o
 
 ## What was optimized
 
-The campaign optimized Tactics.md's Rust turn-search and quantized neural evaluation path used to
-generate self-play data. The representative benchmark ran actual game setup, terrain, legal action
-generation, candidate-turn search, child-state mutation, QNNUE evaluation, automatic turn transitions,
-and training-position production.
+The campaign optimized Tactics.md's CPU-based Rust turn-search and quantized neural evaluation path
+used to generate self-play data. The representative benchmark ran actual game setup, terrain, legal
+action generation, candidate-turn search, child-state mutation, QNNUE evaluation, automatic turn
+transitions, and training-position production.
 
 The ledger contains 102 entries over roughly 21 hours: 48 keeps, 52 discards, one neutral result, and
 one scaffolding change. Keeps included correctness and profiling infrastructure, so they are not 48

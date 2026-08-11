@@ -1,10 +1,10 @@
-# Case 06 - Multi-LLM research governance
+# Case 06 - Multi-LLM automated trading research
 
 Observation window: 2026-06-22 through 2026-07-10
 Disclosure mode: anonymized
 Lifecycle recheck: 2026-08-10
 Duration: several weeks of concentrated work followed by a one-month recheck
-Application domain: intentionally withheld
+Application domain: quantitative trading; project, market, instruments, and strategies withheld
 
 ## Interpretation warning
 

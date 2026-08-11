@@ -11,10 +11,11 @@ report describes results and implementation mechanics without reproducing reposi
 
 ## What the campaigns covered
 
-The first campaign optimized two interpretable agents. Greedy selected local actions, while Heuristic
-planned and scored coordinated full turns. The work progressed from scalar tuning against an unstable
-reference to frozen candidate-versus-control evaluation, fixed-matchup diagnosis, random-team gates,
-protected regression cases, Bayesian optimization, population ranking, and bounded MCTS ablations.
+The first campaign developed and optimized two interpretable, hand-written agents. Greedy selected
+locally strong actions, while Heuristic planned and scored coordinated full turns. The work progressed
+from scalar tuning against an unstable reference to frozen candidate-versus-control evaluation,
+fixed-matchup diagnosis, random-team gates, protected regression cases, Bayesian optimization,
+population ranking, and bounded MCTS ablations.
 
 The second campaign, from 2026-04-05 through 2026-04-07, tested action-node search. Instead of making a
 complete turn one search edge, it represented moves, attacks, abilities, and ending the turn as

@@ -1,9 +1,21 @@
-# Case 10 - Adaptive search campaign
+# Case 10 - Adaptive quantitative-trading strategy search
 
 Observation window: 2026-08-08 through 2026-08-10
 Disclosure mode: anonymized
 Duration: three calendar days, with roughly two days of substantive research
-Application domain: intentionally withheld
+Application domain: quantitative trading; project identity and asset class withheld
+
+## What was researched
+
+The campaign searched over rules for a quantitative trading strategy using time-ordered historical
+data. It tested low thousands of related policy variants across nearly one hundred batches, compared
+candidate families, examined whether combinations added genuinely different behavior, and reserved a
+sealed future period that discovery runs were forbidden to inspect. No candidate reached that final
+promotion test.
+
+The practical questions were whether a proposed rule still worked after realistic costs, whether
+apparently different variants actually produced different trades, whether combining strategies added
+diversification, and whether a long-running agent was continuously testing useful hypotheses.
 
 ## Exposure
 
@@ -43,37 +55,40 @@ more time on local optimization and infrastructure. This counterfactual is plaus
 
 ## Main findings
 
-### Effective configuration can change the research premise
+### Real deployment settings can invalidate the whole search
 
-A provisional setting was later replaced by an observed effective value. Replaying unchanged
-representatives materially changed viability and top-level direction. Historical artifacts remained
-valid under their recorded assumptions but could not be relabeled as evidence for the new setting.
+A documented default cost setting was later replaced by the value actually loaded for deployment.
+Rerunning unchanged representative strategies under the real setting overturned much of their
+apparent viability and changed the research direction. Earlier results remained valid only for their
+recorded hypothetical costs.
 
 Premise-sensitive configuration should therefore be observed before broad search where possible. When
 it changes, replay a compact unchanged representative set before continuing.
 
-### Scenario identity covers the complete configuration
+### A scenario name must include every setting that can change behavior
 
-A sensitivity for one changed term did not reproduce a complete scenario because another term remained
-embedded in the original behavior. Post-hoc transformation is exact only when behavior is invariant and
-all affected quantities were persisted. Otherwise the complete scenario must be rerun.
+Changing one cost in a saved report did not reproduce the full deployment scenario because another
+path-dependent cost was still baked into the original trades. Repricing old results is valid only when
+the strategy would make the same decisions and every affected quantity was saved. Otherwise rerun the
+strategy under the complete scenario.
 
-### Correlated candidates should be compressed
+### Thousands of variants may still represent the same few ideas
 
-Many tuned candidates were close behavioral siblings. Treating them as independent diversity would
-have distorted downstream allocation. A representative set organized by causal mechanism and behavior
-revealed useful diversification, although exact concentration rules remained unstable.
+Many tuned strategies were minor variations that made nearly the same trades. Counting them as
+independent ideas would have made one crowded family look artificially diverse. Grouping candidates by
+mechanism and actual behavior revealed the smaller set of distinct approaches worth combining, though
+the exact allocation among them remained unstable.
 
-### A duration is not a scheduler
+### Telling an agent to work for hours does not keep it doing research
 
-A long autonomous instruction did not ensure continuous hypothesis work. The workflow sometimes waited
-despite usable evidence or treated setup as sufficient progress. A work-conserving queue and named wait
-gates were needed.
+Asking the agent to keep working for a long duration did not make it continuously test hypotheses. It
+sometimes waited despite having usable evidence or treated setup work as research progress. The loop
+needed an explicit queue of runnable experiments and a concrete reason whenever it stopped.
 
-### Infrastructure needs a blocked experiment
+### Build a tool only when a specific experiment needs it
 
-Supporting machinery was valuable but could become the default activity. Requiring every proposed tool
-to name the experiment it unblocked improved focus without weakening integrity controls.
+Supporting tools were valuable but could become the default activity. Requiring every proposed tool
+to name the experiment it would unblock kept the campaign focused without weakening integrity checks.
 
 ## Model observation
 

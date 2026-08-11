@@ -1,4 +1,4 @@
-# Case 05 - Tactics.md fixed-budget model optimization
+# Case 05 - Tactics.md neural evaluator optimization
 
 Observation window: 2026-04-15 through 2026-05-08
 Disclosure mode: named detailed, private repository
@@ -14,6 +14,10 @@ repository owner approved publication of the project name and detailed results o
 The project trained neural action-value models and used them as leaf evaluators in game-tree search.
 The deployment question was not which network predicted held-out targets best. It was which network
 produced the strongest play when every move received the same 10 millisecond search budget.
+
+Unlike Case 02, this campaign did not develop the action-node search architecture. It optimized the
+models that scored positions at the leaves of an existing search loop, including model shape, target
+weighting, quantization, training data, and inference cost.
 
 The evidence store contains 435 structured result bundles plus manual ablations and out-of-band
 matches. This is cumulative adaptive search burden, not 435 independent confirmations. Highlighted
