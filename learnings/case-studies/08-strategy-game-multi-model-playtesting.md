@@ -114,7 +114,7 @@ project to expose existing causal evidence before adding requested features.
 Current status: durable workflow guidance. When reviewers disagree, change one layer at a time and run
 the cheapest counterfactual that distinguishes their explanations.
 
-### AI playtests do not show whether humans will enjoy the game
+### AI playtesters provided useful product feedback
 
 Models formed hypotheses, revised them after evidence, detected ambiguous wording, and explained
 causal tradeoffs. Their predictions about human experience changed with prompt framing and presentation.
