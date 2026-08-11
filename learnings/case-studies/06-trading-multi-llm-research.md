@@ -1,4 +1,4 @@
-# Case 06 - Multi-LLM automated trading research
+# Case 06 - Quantitative trading research with multiple LLMs
 
 Observation window: 2026-06-22 through 2026-07-10
 Disclosure mode: anonymized

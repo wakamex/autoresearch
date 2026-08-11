@@ -1,4 +1,4 @@
-# Case 08 - Multi-model playtesting for a strategy game
+# Case 08 - Party-management strategy game playtesting with multiple LLMs
 
 Observation window: 2026-08-02 through 2026-08-09
 Disclosure mode: anonymized

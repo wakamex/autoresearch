@@ -53,7 +53,7 @@ The nominal runtime also fell to 7.034 seconds, but that was not a clean speedup
 workload changed. The useful result was workload identity. More repetitions of the original benchmark
 would only have measured a mixture of different games more precisely.
 
-### Several large local wins failed end to end
+### Several large component-level wins failed end to end
 
 The campaign retained substantial paired improvements against immediate controls:
 
@@ -71,16 +71,17 @@ The campaign did not preserve one frozen start-to-end comparison.
 
 Several attractive screens also failed promotion. Preallocating movement output improved its cached
 microbenchmark by 12.99% but regressed the pinned full workload by 3.74%. An aligned AVX2 layout won
-2.31% locally and was exactly neutral end to end. Removing a target lookup almost halved one named
-bucket while total runtime regressed 0.35%. The local measurements explained mechanisms; none had
+2.31% in the isolated evaluator benchmark and was exactly neutral end to end. Removing a target lookup
+almost halved one named bucket while total runtime regressed 0.35%. The component measurements
+explained mechanisms; none had
 promotion authority.
 
 ### Exactness belonged at the complete candidate-turn boundary
 
 The campaign found eight correctness and exactness defects. They included missing sparse model
 features, hidden terrain randomness, unstable feature ordering, stale evaluation after an action
-automatically ended a turn, local parity that missed search-level floating-point drift, and an SIMD
-indexing error.
+automatically ended a turn, component-level parity that missed search-level floating-point drift, and
+a SIMD indexing error.
 
 Several candidates passed action-level or evaluator-level checks but changed later search behavior
 through ordering, accumulated floating-point differences, automatic transitions, or RNG consumption.
@@ -100,7 +101,7 @@ Codex was the primary repository analyst, implementation worker, experiment runn
 and log maintainer. The exact model route was not recorded. It was effective at unfamiliar Rust code,
 low-level and structural optimization, parity tests, profiler construction, and benchmark-defect
 diagnosis. It needed human help to close exhausted families, continue beyond local completion, and
-recognize when local exactness was weaker than full-turn correctness.
+recognize when component-level exactness was weaker than full-turn correctness.
 
 Later Tactics.md controllers had structured run bundles, persistent queues, better checkpoint
 preservation, and clearer evidence labels. The March autonomy and role observations require retest
