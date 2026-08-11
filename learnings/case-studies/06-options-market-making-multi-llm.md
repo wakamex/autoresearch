@@ -1,10 +1,10 @@
-# Case 06 - Quantitative trading research with multiple LLMs
+# Case 06 - Options market-making research with multiple LLMs
 
 Observation window: 2026-06-22 through 2026-07-10
 Disclosure mode: anonymized
 Lifecycle recheck: 2026-08-10
 Duration: several weeks of concentrated work followed by a one-month recheck
-Application domain: quantitative trading; project, market, instruments, and strategies withheld
+Application domain: options market making; project, venue, instruments, and strategies withheld
 
 ## Interpretation warning
 
@@ -52,8 +52,16 @@ training region and repeatedly consulted time-based validation windows. The judg
 evaluator changes, family closure, robustness batteries, and deployment interpretation. No truly
 untouched external promotion source remained after adaptive use of the internal windows.
 
-At the August 10 recheck, later causal and precision corrections had invalidated or weakened the
-strongest candidate claims, and newer data weakened the underlying opportunity premise. Automated
+At the August 10 recheck, a causal-input correction had invalidated one candidate that looked ready
+for promotion, but it had not erased the broader historical opportunity: a corrected replacement
+still survived bounded validation on the earlier windows. The broad return collapse first appeared
+in a fresh window immediately after a publicly announced additional professional liquidity provider
+joined the quoting network. In that window, the unchanged policy rejected most observed quotes on
+quality, and a deliberately hindsight-fitted threshold recovered only a small gross ceiling before
+charging anything for improving the competing quote or for missed fills. The evidence therefore
+supports competition-driven edge compression as the leading explanation, rather than attributing
+the disappearance to the causal correction or to autoresearch itself. It is not clean causal proof:
+the new window was short, and other contemporaneous regime changes remain possible. Automated
 operation had stopped and no continuous deployment candidate remained approved. The case therefore
 supports methodology and role specialization, not a durable application outcome.
 
@@ -125,11 +133,27 @@ contract, effective configuration, evaluator maturity, and session semantics.
 
 From 2026-06-29 through the August 10 recheck, candidates repeatedly changed status after
 deduplication, causal corrections, higher-precision evaluation, new seeds, independent audit, or fresh
-time windows. No model, loop, or reviewer had unilateral continuous-deployment authority.
+time windows. One causal correction rejected a candidate without eliminating the broader opportunity;
+the replacement retained bounded evidence until the return disappeared in a short newer window as
+stronger competition appeared. No model, loop, or reviewer had unilateral continuous-deployment
+authority.
 
 Current status: durable. Repeatedly consulted holdouts are internal development evidence. Promotion
 requires sealed or newly minted evidence plus an independent owner, and deployment remains a separate
 operational authorization.
+
+### Separate candidate invalidation from opportunity decay
+
+The causal-input correction rejected one promotion-looking candidate without eliminating the earlier
+historical return. A corrected replacement retained bounded evidence until the first fresh window
+after stronger professional quote competition appeared. Most new observations then failed the frozen
+quality rule, while a hindsight-fitted relaxation found too little gross return to support competing
+at the new price level after realistic quote improvement and fill costs.
+
+Current status: qualified but important. The timing and price evidence make competition-driven edge
+compression the leading explanation for the return collapse, not a generic failure of the research
+method. One short post-entry window cannot isolate competition from every contemporaneous regime
+change, so this should remain an attribution with explicit alternatives rather than a causal fact.
 
 ## Model observations
 
@@ -150,8 +174,8 @@ operational authorization.
 
 ## Evidence limits
 
-This anonymized report omits project identity, domain, repository, strategy, evaluator details,
-application metrics, operational topology, exact private resource totals, internal names, paths,
+This anonymized report omits project identity, venue, instruments, repository, strategy, evaluator
+details, application metrics, operational topology, exact private resource totals, internal names, paths,
 commits, sessions, prompts, logs, hashes, URLs, and reproduction commands. Exact dates and public model
 and provider routes are retained for evidence provenance. The case supports methodology and observed
 role specialization, not a durable application outcome or general model leaderboard.
