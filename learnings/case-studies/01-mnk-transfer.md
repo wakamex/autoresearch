@@ -1,4 +1,4 @@
-# Case 01 - Public transfer-learning campaign
+# Case 01 - M,N,K transfer-learning campaign
 
 Observation window: 2026-02-04 through 2026-02-22
 Disclosure mode: public full-detail

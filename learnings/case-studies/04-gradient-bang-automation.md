@@ -1,4 +1,4 @@
-# Case 04 - Public headless live automation
+# Case 04 - Gradient Bang headless automation
 
 Observation window: 2026-04-14 through 2026-04-16
 Disclosure mode: public full-detail

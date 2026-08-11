@@ -11,6 +11,8 @@ Synthesis dependencies: `trading-competitions.md`, `gpu-optimization.md`, and `a
 - Keep the evaluator and integrity checks outside the worker's writable environment.
 - Let workers propose and measure. Give one explicit judgment owner responsibility for promotion, family closure, and evaluator audits.
 - Use deterministic code, not an LLM judgment, as the final authority wherever the outcome can be mechanically checked.
+- Use multi-model panels as independent diagnostic participants, not voting committees. Give each route the same frozen primary evidence in a separate session, preserve its trajectory, and synthesize only after collection.
+- Allocate model routes by observed role rather than one aggregate score. Track protocol compliance, distinct causal hypotheses, verified catches, latency, and cost separately.
 - Treat unconstrained optimization as a ceiling and expressivity diagnostic unless it is explicitly authorized to control the product. When authored or interpretable policy matters, declare the higher-level decisions an optimizer must preserve and test those invariants exactly.
 - Freeze the interface experienced by an evaluator separately from optional diagnostic instrumentation. Criticism of a machine-oriented report is not automatically evidence about the intended product experience.
 
@@ -69,7 +71,7 @@ Synthesis dependencies: `trading-competitions.md`, `gpu-optimization.md`, and `a
 - When a comparison crosses both an artifact change and a runtime change, first rerun the unchanged artifact on the new runtime. Use the remaining crossed cell if that bridge does not isolate the responsible layer, and bind every cell to executable, artifact, and effective-configuration identity.
 - When a component is consumed by an outer loop under a fixed resource budget, select on end-to-end utility in the representative data regime. Per-call quality, throughput, arithmetic count, surrogate loss, and work completed are diagnostics unless they have been shown to preserve the same ranking.
 - For stateful or stochastic software, place the correctness gate at the smallest complete transaction after which all externally relevant outputs, state, ordering effects, and stochastic position can be compared. Local parity alone may miss downstream semantic changes.
-- Use AI evaluators as inexpensive probes of language precision, available controls, evidence legibility, and theory revision. Do not treat their predictions of human understanding, usability, enjoyment, or retention as human validation.
+- Use AI evaluators as inexpensive probes of language precision, available controls, evidence legibility, and theory revision. Treat cross-family disagreement as a reason to test the failure layer, and agreement as a triage signal rather than validation. Do not treat predictions of human understanding, usability, enjoyment, or retention as human evidence.
 - Treat absence from a bounded, paginated, cached, or locally centered view as unknown rather than novel. Expand or recenter the query before spending resources on an inferred boundary.
 
 ## Search policy and stopping

@@ -1,4 +1,4 @@
-# Case 07 - Sim-to-live transfer and orchestration
+# Case 07 - Sim-to-live replay and stateful orchestration
 
 Observation window: 2026-07-08 through 2026-07-27
 Disclosure mode: anonymized

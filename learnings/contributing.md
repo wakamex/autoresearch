@@ -1,16 +1,16 @@
 # Contributing autoresearch learnings
 
-Scope: Guidance for extracting transferable autoresearch lessons as anonymized case studies or authorized full-detail public reports.
+Scope: Guidance for extracting transferable autoresearch lessons under anonymized, named-private, or public full-detail disclosure.
 
-This repository accepts generalized methodology findings, not private project records. Contributions
-from another project should begin as sanitized drafts under the ignored `.local/contributions/`
-staging area, outside tracked repository content. A curator can then deduplicate and merge durable
-findings into the existing synthesis documents.
+This repository accepts curated methodology findings and case studies, not raw private project
+records. Contributions from another project should begin as drafts under the ignored
+`.local/contributions/` staging area, outside tracked repository content. A curator can then apply the
+declared disclosure boundary, deduplicate findings, and prepare any tracked publication.
 
 ## Contribution workflow
 
 1. Read the current synthesis before extracting new findings.
-2. Declare either anonymized or public full-detail disclosure mode.
+2. Declare anonymized, named detailed with private repository, or public full-detail disclosure mode.
 3. Identify observations that add, refine, qualify, falsify, or contradict an existing principle.
 4. Apply the privacy or publication boundary for the selected disclosure mode.
 5. Classify the evidence and state its boundary conditions.
@@ -18,8 +18,8 @@ findings into the existing synthesis documents.
 7. Run the required disclosure audit over the finished draft.
 8. Give the draft to the repository curator for review and integration.
 
-Do not create one permanent repository document per source project. The durable organization is by
-knowledge type, not by project history.
+Do not create one permanent synthesis document per source project. Aggregate lessons remain organized
+by knowledge type; curated case studies may retain project history when their disclosure mode permits.
 
 ## Existing synthesis
 
@@ -75,6 +75,37 @@ Public full-detail mode still forbids:
 Record who authorized full-detail publication and the authorization date in the local contribution.
 The public case study may state that publication was authorized without naming a private approver.
 
+### Named detailed, private repository
+
+Use this mode when the contributor is authorized to name the project and publish detailed accounts of
+their work, but is not authorized to publish the underlying repository. This is appropriate when the
+repository belongs to another person or organization, remains private, or contains material outside
+the contributor's publication authority.
+
+A named detailed contribution may include authorized:
+
+- Project name, application domain, and a high-level description of the private system.
+- Exact autoresearch dates, experiment design, metrics, configurations, resource burden, and results.
+- Architecture, implementation mechanics, internal terminology, failure modes, and project impact,
+  described in the contributor's own words.
+- Exact public model versions, provider routes, prompts, harness configuration, and role observations.
+- Detailed negative results, causal counterfactuals, maturity changes, and evidence limitations.
+
+It must not include:
+
+- Source code, private repository files, private repository URLs, or links that require unauthorized
+  access.
+- Large or reconstructive excerpts from private documentation, logs, prompts, schemas, or records.
+- Credentials, private endpoints, authentication state, personal data, or confidential third-party
+  information.
+- Proprietary implementation detail whose publication would effectively reconstruct repository
+  content outside the contributor's authority.
+- Claims presented as publicly reproducible when readers cannot inspect the underlying evidence.
+
+Prefer concrete, detailed paraphrase over anonymous abstraction. State prominently that the repository
+and primary evidence are private and cannot be independently inspected by public readers. Record who
+authorized publication of the contributor's work and the authorization date in the local draft.
+
 ## Privacy boundary
 
 This section applies to anonymized mode.
@@ -92,8 +123,9 @@ Do not include or imply:
 - Private URLs, commit hashes, filenames, schemas, logs, prompts, or quotations.
 - Combinations of otherwise harmless details that could fingerprint the project.
 
-It is acceptable to name publicly available LLMs, agent products, and runners. Model observations are
-useful when they describe role-specific strengths and weaknesses without revealing the private task.
+It is acceptable to name publicly available LLMs, agent products, and runners. In anonymized mode,
+describe role-specific strengths and weaknesses without revealing the private task. Named detailed and
+public full-detail modes may retain authorized task context.
 
 General public principles about trading, software optimization, evaluation, or autonomous agents are
 also acceptable. Do not state which of those domains the source project applied.
@@ -105,6 +137,7 @@ When uncertain whether a detail is identifying, remove or generalize it.
 Classify every proposed learning as one of:
 
 - Anonymized practitioner observation.
+- Named-private practitioner observation.
 - Repeated practitioner observation.
 - Public-source-supported principle.
 - Inference requiring further validation.
@@ -137,8 +170,9 @@ Useful findings often concern:
 Every draft should describe when and how much opportunity the project had to observe the autoresearch
 workflow. This helps distinguish a short evaluation on basic infrastructure from a mature operating
 pattern. Local ignored drafts should record the calendar window. Public synthesis may generalize that
-window when an exact date would identify the project. Continue to use coarse bands for counts, costs,
-and identifying milestones.
+window when an exact date would identify the project. In anonymized mode, continue to use coarse bands
+for counts, costs, and identifying milestones. Named detailed and public full-detail modes may retain
+authorized exact values.
 
 Record:
 
@@ -153,7 +187,8 @@ Record:
 - Search intensity: low, moderate, high, or very high.
 - Parallelism: primarily sequential, limited parallel proposal work, or broad parallel search.
 - Human involvement: mostly autonomous, periodic review, frequent steering, or tightly supervised.
-- Resource intensity: light, moderate, or heavy relative to the project, without exact compute or cost.
+- Resource intensity: use a qualitative band in anonymized mode. Named detailed and public full-detail
+  modes may retain authorized exact compute or cost.
 - Breadth: isolated component, several components, or project-wide methodology.
 - Starting infrastructure: the evaluator, ledger, worker isolation, orchestration, recovery, and
   promotion capabilities available when the observations began.
@@ -193,20 +228,25 @@ part of the public privacy boundary.
 # Autoresearch contribution draft
 
 Privacy status:
-Sanitized for anonymized mode, or publication-authorized for public full-detail mode
+Sanitized for anonymized mode, publication-authorized for named detailed private-repository mode, or
+publication-authorized for public full-detail mode
 Evidence basis:
-Anonymized observations, or named public project evidence with links and revisions
+Anonymized observations, named private project evidence unavailable to public readers, or named public
+project evidence with links and revisions
 Intended use: editorial input, not direct publication
 Disclosure mode:
-Anonymized or public full-detail
+Anonymized, named detailed with private repository, or public full-detail
 Publication authorization:
-Required for public full-detail mode. Record the authorizing person or source and date locally.
+Required for named detailed and public full-detail modes. Record the authorizing person or source and
+date locally.
 Contribution prepared:
 YYYY-MM-DD
 
 Project identity:
 In anonymized mode, write "withheld." In public full-detail mode, provide the authorized public name,
-domain, repository URL, and relevant public revision.
+domain, repository URL, and relevant public revision. In named detailed private-repository mode,
+provide the authorized project name and domain, state that the repository is private, and do not
+include its URL or private revisions.
 
 ## Exposure and project impact
 
@@ -221,7 +261,8 @@ Usage pattern:
 Concentrated, repeated, intermittent, or continuous.
 
 Project phases:
-List broad phases without identifying milestones.
+List broad phases. Anonymized mode must avoid identifying milestones; named detailed and public
+full-detail modes may retain authorized specifics.
 
 Search intensity:
 Low, moderate, high, or very high.
@@ -234,7 +275,8 @@ Human involvement:
 Mostly autonomous, periodic review, frequent steering, or tightly supervised.
 
 Resource intensity:
-Light, moderate, or heavy relative to the project.
+Use a qualitative band in anonymized mode. Named detailed and public full-detail modes may retain
+authorized exact counts, compute, time, or cost.
 
 Breadth:
 Isolated component, several components, or project-wide methodology.
@@ -272,13 +314,14 @@ State the evaluator, ledger, isolation, orchestration, promotion, recovery, and 
 that materially affected this observation.
 
 Observation:
-What happened, stated without identifying details.
+What happened. Remove identifying details in anonymized mode; retain authorized concrete context in
+named detailed or public full-detail mode.
 
 Interpretation:
 The proposed general lesson and causal explanation.
 
 Evidence class:
-One of the four evidence classes in the contribution guide.
+One of the evidence classes in the contribution guide.
 
 Confidence:
 Low, medium, or high.
@@ -310,18 +353,23 @@ For every named model or agent system used, record:
 - Role it performed.
 - What it was consistently good at.
 - What it was consistently bad at.
-- Relative speed or cost in qualitative terms only.
+- Relative speed or cost. Use qualitative terms in anonymized mode; retain authorized exact values in
+  named detailed or public full-detail mode when useful.
 - Recurring failure patterns.
 - Best role assignment.
-- Evidence strength as low, medium, or high, without exact counts.
+- Evidence strength as low, medium, or high. Named detailed and public full-detail modes may also
+  retain authorized exact counts.
 - Possible dependence on version, provider routing, prompting, tools, or harness design.
 
-Do not reveal the private task or application domain.
+In anonymized mode, do not reveal the private task or application domain. In named detailed mode,
+retain authorized task context that makes the model observation understandable without reproducing
+private repository content.
 
-## Findings that should remain private
+## Findings that should remain unpublished
 
-List only categories of useful material that were intentionally excluded. Do not include the
-sensitive content itself.
+List only categories of useful material that were intentionally excluded. Do not include the excluded
+content itself. For named detailed mode, distinguish repository-owned material from details the
+contributor authorized for publication.
 
 ## Findings not ready for promotion
 
@@ -344,6 +392,12 @@ For public full-detail mode, run a publication audit instead. Confirm that every
 metric, link, revision, and operational fact is authorized for publication. Independently check for
 credentials, personal data, confidential third-party information, private endpoints, unpublished
 conversations, and security-sensitive details. Remove anything outside the authorization boundary.
+
+For named detailed private-repository mode, run a named-detailed publication audit. Confirm that the
+draft retains as much authorized concrete detail as possible while reproducing no source code, private
+repository files or URLs, reconstructive excerpts, credentials, personal data, or confidential
+third-party material. Confirm that the report clearly states that its primary evidence is private and
+not independently inspectable by public readers.
 ```
 
 ## Instructions for contributing agents
@@ -351,21 +405,24 @@ conversations, and security-sensitive details. Remove anything outside the autho
 An agent following this guide must:
 
 - Treat the current private workspace as evidence to summarize, not material to copy.
-- Avoid copying raw records, logs, prompts, code, or long quotations into the draft.
+- Avoid copying raw records, logs, prompts, code, or long quotations into the draft. Named detailed
+  mode permits detailed paraphrase, not republication of private repository content.
 - Avoid running Git commands or editing tracked files in `/code/autoresearch`.
 - Record the local calendar window and infrastructure maturity. Publish exact or generalized dates
   according to the declared disclosure mode and authorization boundary.
-- State the disclosure mode and never infer full-detail authorization merely from repository visibility.
+- State the disclosure mode and never infer detailed-publication authority merely from repository
+  visibility or access.
 - Prefer a short set of defensible findings over an exhaustive project narrative.
 - State uncertainty and unresolved confounders explicitly.
-- Write only the sanitized draft under `/code/autoresearch/.local/contributions/`.
+- Write only the contribution draft under `/code/autoresearch/.local/contributions/`.
 - End its response with the draft path and whether the applicable redaction or publication audit passed.
 
 ## Curator review
 
 Before promotion, the curator should:
 
-- Verify the declared disclosure mode and, for full-detail publication, its explicit authorization.
+- Verify the declared disclosure mode and explicit authorization for named detailed or public
+  full-detail publication.
 - Repeat the applicable privacy or publication audit without opening unnecessary private records.
 - Compare the draft against existing learnings for duplication.
 - Verify that the calendar window describes the actual observations rather than file dates or the date
@@ -378,7 +435,9 @@ Before promotion, the curator should:
 - Check that claimed project impact includes a plausible counterfactual and is not inferred from
   experiment volume alone.
 - Check whether observations and interpretations are clearly separated.
-- Reject claims whose useful meaning depends on restoring private details.
+- In anonymized mode, reject claims whose useful meaning depends on restoring private details. In named
+  detailed mode, include authorized details when they materially improve meaning, while excluding
+  repository-owned content.
 - Preserve model names only when their role-specific behavior is informative.
 - Merge accepted wording into the smallest relevant existing document.
 - Update review dates and source relationships where appropriate.
@@ -426,3 +485,19 @@ without reproduction on the newer infrastructure.
 
 Full-detail reports still require the publication audit. Public project identity does not weaken the
 rules against secrets, personal data, third-party confidentiality, or unsupported claims.
+
+## Publishing named reports backed by a private repository
+
+For authorized work in a private repository, the curator may publish a named, detailed report without
+publishing or linking the repository. The report should explain the project, experiments, exact
+results, infrastructure evolution, model roles, failures, and impact as concretely as the contributor's
+authority permits.
+
+State near the beginning that the underlying repository and primary artifacts are private, so the
+report is a practitioner account rather than publicly reproducible evidence. Prefer original summary,
+small derived tables, and detailed paraphrase. Do not reproduce source code, private files, private
+links, or enough proprietary structure to substitute for access to the repository.
+
+Named private-repository reports require a named-detailed publication audit. Naming a project does not
+weaken the rules against credentials, personal data, third-party confidentiality, unsupported causal
+claims, or material outside the contributor's publication authority.

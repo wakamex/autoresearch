@@ -1,4 +1,4 @@
-# Case 08 - Multi-model evaluation
+# Case 08 - Multi-agent playtesting across model families
 
 Observation window: 2026-08-02 through 2026-08-09
 Disclosure mode: anonymized
@@ -10,7 +10,7 @@ Application domain: intentionally withheld
 - Usage pattern: several concentrated and repeated campaigns.
 - Project phases: exploration, implementation, optimization, and validation.
 - Search intensity: very high.
-- Parallelism: limited parallel proposals plus independent cross-model evaluation campaigns.
+- Parallelism: independent model-family playtests could run concurrently; adjudication and synthesis were serialized.
 - Human involvement: frequent steering.
 - Resource intensity: moderate relative to the project.
 - Breadth: evaluator design, bounded search, interface comprehension, causal diagnostics, and multi-provider orchestration.
@@ -45,27 +45,74 @@ authority existed. There was no human-subject evidence or sealed model ranking.
 
 ## Project impact
 
-Autoresearch meaningfully accelerated implementation and diagnosis, strengthened validation, and
-prevented premature feature or mechanism changes. Its largest contribution was not proposal volume,
-but cheap counterfactuals, exact replay, causal traces, and explicit separation of language, policy,
-evaluator, presentation, and runtime failures.
+From 2026-08-06 through 2026-08-08, six model routes independently playtested the same bounded,
+deterministic experience. They formed and revised their own hypotheses in separate persistent sessions
+without seeing one another's choices. Deterministic code resolved mechanically checkable outcomes,
+tool audits determined procedural validity, and the human owner retained judgment authority.
 
-Without this workflow, the project likely would have added complexity to compensate for misdiagnosed
-failures, overstated correlated adaptive trials, and spent longer tuning an exhausted fixed population.
-The counterfactual cannot be measured directly.
+The panel changed what the project investigated, declined to change, and explained differently. It
+prevented several premature mechanism changes, exposed a high-performing but procedurally invalid
+tool-assisted trajectory, prompted clearer causal presentation, and informed which route was used for
+routine breadth versus occasional deeper review. Its value came from complementary diagnoses and
+failure cases, not proposal volume or majority agreement.
+
+No matched single-agent branch was run. The campaign therefore shows that cross-family review affected
+decisions, but not that it beat one strong agent under equal cost and time. The human synthesizer may
+also have been the main source of the improvement.
 
 ## Main findings
 
-### AI evaluators are comprehension probes
+### Use model families as independent diagnostic participants, not voters
 
-Independent models operating through the same bounded interface formed hypotheses, made valid
-revisions, detected ambiguous wording, and explained causal tradeoffs. Their predictions about human
-experience changed with prompt framing and did not constitute human validation.
+Each family received the same frozen interface and deterministic feedback in a separate session. On
+2026-08-06, three families chose different initial plans and proposed different follow-up experiments.
+Longer trajectories on 2026-08-07 disagreed about whether one control was dominant, inert, or simply
+poorly explained. Six routes on 2026-08-08 again found distinct useful theories, including a
+counterintuitive interaction reproduced by a long-horizon participant.
 
-Current status: durable but qualified. AI subjects can preflight comprehension and evidence use, while
-claims about human experience remain provisional until tested with people.
+The useful output was the spread of falsifiable mechanisms. Deterministic replay established what
+happened; disagreement revealed where the evidence or presentation could not support one diagnosis.
+A vote would have discarded that information, and model count was not evidence weight.
 
-### Product and diagnostic channels must be separated
+Current status: qualified method. It requires frozen evidence, independent sessions, deterministic or
+well-controlled outcomes, retained trajectories, and one explicit judgment owner. Shared training
+priors, prompts, and fixtures mean different families are not statistically independent samples.
+
+### Allocate agents by observed role, not one score
+
+No route dominated compliance, breadth, causal depth, latency, and cost. Fast routes were useful for
+cheap breadth and wording preflights. Slower routes were better suited to sequential investigation.
+Occasional higher-cost routes could add sharper criticism without producing better adaptive play. A
+semantically useful tool-capable route failed the blind-participant contract entirely.
+
+The campaign used a small matched comparison to retain a cheaper route for routine throughput and a
+more expensive route only for occasional review. This was a local allocation decision, not a general
+model ranking.
+
+Current status: promising and route-specific. Track valid compliance, distinct causal hypotheses,
+verified catches, latency, and cost separately.
+
+### Treat disagreement as a failure-layer diagnostic
+
+Conflicting reviews separated mechanism behavior, strategy expressivity, evidence presentation,
+evaluator integrity, and participant misunderstanding. In one case, changing only the presentation
+channel revised a strong criticism without changing system behavior. In another, disagreement led the
+project to expose existing causal evidence before adding requested features.
+
+Current status: durable workflow guidance. When reviewers disagree, change one layer at a time and run
+the cheapest counterfactual that distinguishes their explanations.
+
+### AI playtesters are comprehension probes, not human validators
+
+Models formed hypotheses, revised them after evidence, detected ambiguous wording, and explained
+causal tradeoffs. Their predictions about human experience changed with prompt framing and presentation.
+Even unanimous AI feedback remained a correlated prediction from reused fixtures, not evidence about
+people.
+
+Current status: durable but qualified. AI playtesting can preflight comprehension and prioritize human
+tests. It cannot validate usability, enjoyment, retention, or population behavior.
+
+### Keep product and diagnostic channels separate
 
 Reviewers initially consumed compact machine-oriented reports and attributed report-reading burden to
 the intended experience. Clarifying the presentation contract changed their diagnosis without changing
@@ -128,7 +175,8 @@ authority existed.
 
 - Optional causal traces may improve the next diagnosis, but may only increase explanation length.
 - Seeded fixture variation may restore discovery diversity or merely create a larger memorization surface.
-- Cross-model disagreement may reflect provider and prompt differences rather than independent evidence.
+- Cross-family panels may outperform one strong reviewer under a matched budget, but this campaign did not test that comparison.
+- Cross-model disagreement may reflect provider state, scaffolding, or prompt differences rather than reasoning diversity.
 - AI predictions about human usability and enjoyment remain unvalidated without human participants.
 
 ## Evidence limits

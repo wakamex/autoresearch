@@ -231,6 +231,19 @@ records, inspect a broader scope than the actor's synthesis, and have authority 
 claims. Let the actor verify concrete catches afterward, while treating overlapping scores and shared
 framing as possible anchoring rather than independent confirmation.
 
+### Multi-model panels are diagnostic samples, not votes
+
+Different model families can expose complementary hypotheses, misunderstandings, and procedural
+failures when they independently receive the same frozen evidence. Preserve each adaptive trajectory
+and use deterministic checks to adjudicate mechanical outcomes. Synthesize disagreements by failure
+layer rather than averaging scores or taking a majority vote.
+
+Route diversity does not guarantee evidentiary independence, and one observed panel does not establish
+superiority over a strong single reviewer. Count verified catches and avoided wrong-layer changes,
+track compliance and operational burden separately, and require a matched budgeted control before
+claiming a multi-agent advantage. Unanimous model predictions about people remain predictions, not
+human validation.
+
 ### Negative results need reopening conditions
 
 A failed mechanism is not a timeless fact. Its outcome may depend on representation, layout, call

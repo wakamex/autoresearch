@@ -1,4 +1,4 @@
-# Case 06 - Multi-model research governance
+# Case 06 - Multi-LLM research governance
 
 Observation window: 2026-06-22 through 2026-07-10
 Disclosure mode: anonymized
