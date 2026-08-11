@@ -3,7 +3,7 @@
 Observation window: 2026-08-06 through 2026-08-08
 Disclosure mode: named detailed, private repository
 Duration: three calendar days in one concentrated campaign
-Project: FreeTranscribe.org, a production web service for private AI transcription
+Project: [FreeTranscribe.org](https://freetranscribe.org/), a production web service for private AI transcription
 
 The implementation repository, evaluator, and primary artifacts remain private. This is an authorized
 practitioner account of my work, not independently reproducible public evidence. Current-infrastructure

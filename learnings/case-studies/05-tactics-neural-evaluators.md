@@ -3,7 +3,7 @@
 Observation window: 2026-04-15 through 2026-05-08
 Disclosure mode: named detailed, private repository
 Duration: several intensive campaigns across several weeks
-Project: Tactics.md, a private turn-based tactics game played on a hex grid
+Project: [Tactics.md](https://tactics.md/), a private turn-based tactics game played on a hex grid
 
 The repository and primary artifacts belong to another party and remain private. This is an
 authorized practitioner account of my work, not independently reproducible public evidence. The
