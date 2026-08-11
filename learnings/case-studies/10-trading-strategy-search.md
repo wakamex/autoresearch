@@ -1,17 +1,17 @@
 # Case 10 - Adaptive quantitative-trading strategy search
 
-Observation window: 2026-08-08 through 2026-08-10
+Observation window: 2026-08-08 through 2026-08-11
 Disclosure mode: anonymized
-Duration: three calendar days, with roughly two days of substantive research
+Duration: four calendar days, including one concentrated eight-hour campaign
 Application domain: quantitative trading; project identity and asset class withheld
 
 ## What was researched
 
 The campaign searched over rules for a quantitative trading strategy using time-ordered historical
-data. It tested low thousands of related policy variants across nearly one hundred batches, compared
-candidate families, examined whether combinations added genuinely different behavior, and reserved a
-sealed future period that discovery runs were forbidden to inspect. No candidate reached that final
-promotion test.
+data. Its first phase tested low thousands of related variants across nearly one hundred batches. Its
+latest phase changed the unit of work: each model cycle had to propose one causal mechanism, implement
+one complete strategy, and evaluate it once across the full market panel. Future data remained
+untouched for final testing.
 
 The practical questions were whether a proposed rule still worked after realistic costs, whether
 apparently different variants actually produced different trades, whether combining strategies added
@@ -20,11 +20,11 @@ diversification, and whether a long-running agent was continuously testing usefu
 ## Exposure
 
 - Usage pattern: one concentrated campaign with repeated experimental batches and follow-up audits.
-- Project phases: exploration, implementation, optimization, validation, and deployment preparation.
+- Project phases: exploration, implementation, optimization, portfolio evaluation, validation design, and deployment preparation.
 - Search intensity: very high.
 - Parallelism: primarily sequential execution with limited parallel proposal work.
 - Human involvement: frequent steering, especially for research direction, premise audits, and resource allocation.
-- Resource intensity: heavy relative to the project.
+- Resource intensity: heavy relative to the project, with exact token and route-cost accounting in the latest panel.
 - Breadth: project-wide methodology spanning data contracts, evaluators, search, research memory, orchestration, and decision review.
 - Decision influence: critical to several major decisions.
 
@@ -36,24 +36,62 @@ recovery, or progress-freshness monitor. By 2026-08-10 it had disposable worktre
 structured transaction and campaign records, causal replay, explicit evidence labels, a reserved
 sealed epoch, and bounded recovery on the strict path.
 
-The high-throughput path still used a shared repository, evaluators remained worker-editable, and the
-rolling agent session acted as director. The sealed epoch remained untouched and no promotion run
-occurred. A 2026-08-10 comparison found that a separate newer harness had stronger persistent
-orchestration, admission, recovery, and promotion controls, so continuity and model-behavior claims
-from this campaign require retest under that infrastructure.
+On 2026-08-11, the campaign froze one synchronized multi-market development snapshot, added a shared
+portfolio budget and deterministic event ordering, and gave strategy agents isolated worktrees. A
+seeded route scheduler balanced exploitation with random exploration and starvation
+protection. The eight-hour campaign completed 46 route cycles, implemented 39 strategies, and retained
+35 causally valid results. It included 12 new mechanisms and 16 interactions or portfolio-aware
+policies, with no infrastructure-only batch.
+
+The evaluator remained worker-editable and the rolling agent session still acted as director. The
+sealed future period remained untouched and no promotion run occurred.
 
 ## Project impact
 
-The contribution was mixed but important. Autoresearch produced key falsifications, stronger
-validation, reusable evaluation infrastructure, and a more defensible decision process. Raw autonomous
-throughput was lower than elapsed time and resource use suggested because work sometimes shifted toward
-waiting, supporting machinery, or nearby variants.
+Autoresearch built a reproducible evaluation pipeline, searched broadly, exposed false premises, and
+then improved its own research method. Replacing nearby parameter variants with mechanism-first cycles
+produced clearer strategy diversity. Shared-capital replay found one slightly positive selective
+controller and several distinct tradeoffs between profit and trading volume that independent
+per-market tests had hidden.
 
-Without autoresearch, systematic comparison would likely have been slower and favorable assumptions
-might have survived longer. Without frequent human steering, the same workflow likely would have spent
-more time on local optimization and infrastructure. This counterfactual is plausible but unmeasured.
+The latest no-wait contract also sustained continuous useful work across 46 route cycles. This
+superseded the early impression that Codex could not maintain broad search, while confirming that a
+duration request alone was not enough.
 
 ## Main findings
+
+### Replay strategies against the resources they actually share
+
+The earlier evaluator gave every market an independent capacity limit. Every normal-sized strategy
+remained negative after costs under that assumption. The August 11 evaluator instead merged markets in
+receive-time order and made them compete for one portfolio budget. Under that shared budget, one
+selective controller became slightly positive while retaining about 41% of baseline volume. Several
+other strategies formed useful intermediate PnL-volume tradeoffs.
+
+Independent component tests can explain mechanisms, but they do not establish a feasible portfolio
+when components compete for capital, inventory, risk, or another shared resource.
+
+### Search for different mechanisms, not thousands of nearby settings
+
+The first campaign explored low thousands of correlated variants. The later campaign ran 46
+mechanism-first cycles and retained 35 valid results, including new mechanisms and portfolio-aware
+interactions. One learned controller combined with a causal asymmetry controller to reduce the fixed
+baseline loss by about 55% and beat both declared parents.
+
+Behavior signatures and exact-parent comparisons made the evidence easier to interpret. Parameter
+tuning still had value after a mechanism worked, but it no longer counted as independent research
+diversity.
+
+### Allocate model routes by research yield and cost
+
+The latest 20-cycle GPT-5.6 panel treated each model and effort combination as a separate choice. Luna
+medium and Sol medium both completed every assigned cycle with similar research ratings. Luna medium
+was faster and cost about $0.16 in API-equivalent usage per valid result, compared with about $3.40 for
+Sol medium. Sol still produced distinct valuable strategies that a cheapest-only policy could have
+missed.
+
+The practical allocation was to exploit the inexpensive reliable route while reserving exploration
+for more expensive routes. Quality, completion rate, wall time, and cost remained separate measures.
 
 ### Real deployment settings can invalidate the whole search
 
@@ -72,38 +110,37 @@ path-dependent cost was still baked into the original trades. Repricing old resu
 the strategy would make the same decisions and every affected quantity was saved. Otherwise rerun the
 strategy under the complete scenario.
 
-### Thousands of variants may still represent the same few ideas
+### Similar-looking strategies should be grouped before combining them
 
 Many tuned strategies were minor variations that made nearly the same trades. Counting them as
 independent ideas would have made one crowded family look artificially diverse. Grouping candidates by
-mechanism and actual behavior revealed the smaller set of distinct approaches worth combining, though
-the exact allocation among them remained unstable.
+mechanism and actual behavior revealed the smaller set of distinct approaches worth combining. The
+latest mechanism-first campaign confirmed this diagnosis while producing clearer diversity.
 
 ### Telling an agent to work for hours does not keep it doing research
 
-Asking the agent to keep working for a long duration did not make it continuously test hypotheses. It
-sometimes waited despite having usable evidence or treated setup work as research progress. The loop
-needed an explicit queue of runnable experiments and a concrete reason whenever it stopped.
+Asking the agent to keep working for a long duration did not initially make it continuously test
+hypotheses. An explicit no-wait contract, route scheduler, bounded failures, atomic results, and a
+required closeout report later sustained 46 cycles. The problem was the operating contract, not an
+inherent inability of Codex to continue research.
 
 ### Build a tool only when a specific experiment needs it
 
 Supporting tools were valuable but could become the default activity. Requiring every proposed tool
 to name the experiment it would unblock kept the campaign focused without weakening integrity checks.
 
-## Model observation
+## Model observations
 
-Codex was fast and effective at repository inspection, bounded evaluator and tooling implementation,
-structured artifacts, deterministic validation, and failure attribution. It was weaker at sustaining
-broad autonomous search without steering and tended toward infrastructure, waiting, and nearby
-variants. The best role was bounded implementation and batch execution under an explicit queue,
-infrastructure gates, and periodic judgment-owner review.
+The latest panel compared GPT-5.6 Luna at medium and xhigh effort, Sol at medium and xhigh effort, and
+Terra at high effort through the same AOP harness. Successful Luna and Sol cycles received similar
+research ratings, but completion, time, and API-equivalent cost differed materially. Luna medium was
+the best observed exploitation route. Sol remained useful for exploration because its more expensive
+cycles produced important strategies. Terra produced one strong result but two no-result cycles.
 
-Evidence strength is medium because exposure was intensive but short and had no controlled
-within-project model comparison.
-
-Current status: implementation strengths remain supported, while autonomy, waiting, and throughput
-weaknesses require retest under a persistent conductor. The exact underlying model route was withheld
-because it was not a public model name.
+Across routes, Codex remained effective at repository inspection, deterministic evaluator work,
+causal experiment plumbing, and bounded implementation. The explicit no-wait campaign superseded the
+earlier claim that it could not sustain broad search. Route rankings remain tied to the recorded model,
+effort, harness, prompt, caching, and pricing.
 
 ## Provisional findings
 
@@ -113,7 +150,7 @@ because it was not a public model name.
 
 ## Evidence limits
 
-This is an anonymized practitioner report, not independent replication. Exact metrics, counts,
-configuration values, project identity, application details, and the private model-route identifier
-are omitted. Candidate results were discovery or development evidence, and no sealed promotion result
-was produced.
+This is an anonymized practitioner report, not independent replication. It retains generic campaign
+counts, public model routes, and API-equivalent cost comparisons while omitting project identity,
+asset class, instruments, markets, private configurations, and strategy details. Candidate results
+used adaptively reused development data; future final-test data remained untouched.
