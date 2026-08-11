@@ -90,3 +90,9 @@ I think these would be the reasonable hyperparameters to play with. Ask your fav
 ## License
 
 MIT
+
+## Personal autoresearch learnings
+
+The synthesis and domain playbooks maintained in this fork are indexed in
+[`learnings/`](learnings/README.md), together with the public
+[`external review and bibliography`](learnings/external-review/README.md).

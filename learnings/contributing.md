@@ -1,0 +1,430 @@
+# Contributing autoresearch learnings
+
+Status: active
+Reviewed: 2026-08-10
+Scope: Guidance for extracting transferable autoresearch lessons as anonymized case studies or authorized full-detail public reports.
+
+This repository accepts generalized methodology findings, not private project records. Contributions
+from another project should begin as sanitized drafts under the ignored `.local/contributions/`
+staging area, outside tracked repository content. A curator can then deduplicate and merge durable
+findings into the existing synthesis documents.
+
+## Contribution workflow
+
+1. Read the current synthesis before extracting new findings.
+2. Declare either anonymized or public full-detail disclosure mode.
+3. Identify observations that add, refine, qualify, falsify, or contradict an existing principle.
+4. Apply the privacy or publication boundary for the selected disclosure mode.
+5. Classify the evidence and state its boundary conditions.
+6. Write one draft under `.local/contributions/`. Do not edit tracked repository files directly.
+7. Run the required disclosure audit over the finished draft.
+8. Give the draft to the repository curator for review and integration.
+
+Do not create one permanent repository document per source project. The durable organization is by
+knowledge type, not by project history.
+
+## Existing synthesis
+
+Read these documents before drafting:
+
+- [`principles.md`](principles.md)
+- [`agent-search-retrospective.md`](agent-search-retrospective.md)
+- Any relevant domain playbook listed in [`README.md`](README.md)
+
+A contribution is material when it does at least one of the following:
+
+- Adds a genuinely new workflow lesson.
+- Provides independent support for an existing observation.
+- Identifies a boundary condition or counterexample.
+- Replaces a vague rule with a falsifiable one.
+- Shows that an apparent failure was attributed to the wrong layer.
+- Records a failed practice that future agents might otherwise repeat.
+
+Repeating an existing conclusion without new evidence or qualification is not a material contribution.
+
+## Disclosure modes
+
+### Anonymized
+
+Use this mode for private projects or whenever identifying the application is unnecessary. Follow the
+privacy boundary below and publish only a neutral, sanitized case study.
+
+### Public full-detail
+
+Use this mode only when the project owner explicitly authorizes detailed publication. A public
+repository alone does not authorize publishing private operations, unpublished results, local logs, or
+deployment details that are absent from the public project.
+
+A public full-detail contribution may include:
+
+- Project and repository name, application domain, and canonical public URL.
+- Exact autoresearch dates and project milestones.
+- Public commit hashes, issue or pull-request links, and released implementation names.
+- Exact model versions, providers, prompts, and harness configuration when authorized.
+- Exact experiment counts, resource use, performance results, and before-and-after comparisons when
+  authorized and supported by public or publishable artifacts.
+- Concrete starting and ending infrastructure, including which controls were added during the work.
+- Direct evidence links that let a reader inspect the public implementation or result.
+
+Public full-detail mode still forbids:
+
+- Credentials, tokens, authentication state, private endpoints, or account identifiers.
+- Personal information, customer data, private user data, or confidential counterparties.
+- Security-sensitive operational details that are not intentionally public.
+- Third-party private material or unpublished conversations without permission.
+- Claims that cannot be distinguished from inference or reconstructed from authorized evidence.
+
+Record who authorized full-detail publication and the authorization date in the local contribution.
+The public case study may state that publication was authorized without naming a private approver.
+
+## Privacy boundary
+
+This section applies to anonymized mode.
+
+Do not include or imply:
+
+- Project, repository, company, client, protocol, product, or internal system names.
+- Filesystem paths from the source project.
+- The specific application domain.
+- Instruments, assets, venues, datasets, users, or counterparties.
+- Proprietary architecture, feature, strategy, or implementation names.
+- Internal model aliases, experiment names, or research-era names.
+- Exact private milestones tied to identifying events, result counts, performance values, monetary
+  values, or dataset sizes.
+- Private URLs, commit hashes, filenames, schemas, logs, prompts, or quotations.
+- Combinations of otherwise harmless details that could fingerprint the project.
+
+It is acceptable to name publicly available LLMs, agent products, and runners. Model observations are
+useful when they describe role-specific strengths and weaknesses without revealing the private task.
+
+General public principles about trading, software optimization, evaluation, or autonomous agents are
+also acceptable. Do not state which of those domains the source project applied.
+
+When uncertain whether a detail is identifying, remove or generalize it.
+
+## Evidence discipline
+
+Classify every proposed learning as one of:
+
+- Anonymized practitioner observation.
+- Repeated practitioner observation.
+- Public-source-supported principle.
+- Inference requiring further validation.
+
+Separate the observed behavior from the proposed causal explanation. Do not turn one successful
+result into a universal rule. Include relevant failures, alternative explanations, counterexamples,
+and conditions under which the lesson may not transfer.
+
+For each finding, propose the cheapest experiment that could falsify it in another setting.
+
+## Useful contribution areas
+
+Useful findings often concern:
+
+- Agent and model role specialization.
+- Model strengths, weaknesses, speed, cost, and failure patterns.
+- Experiment design and causal attribution.
+- Evaluator bugs, stale artifacts, or ineffective configuration.
+- Search anchoring, correlated proposals, and repeated candidates.
+- Research memory, reflections, and exclusion maps.
+- Discovery versus promotion evidence.
+- Orchestration, recovery, and unattended-operation failures.
+- Stop conditions and premise audits.
+- Information gained per unit of compute.
+- Expected fixes that failed a cheap counterfactual.
+- Practices that sounded useful but did not work.
+
+## Exposure and project impact
+
+Every draft should describe when and how much opportunity the project had to observe the autoresearch
+workflow. This helps distinguish a short evaluation on basic infrastructure from a mature operating
+pattern. Local ignored drafts should record the calendar window. Public synthesis may generalize that
+window when an exact date would identify the project. Continue to use coarse bands for counts, costs,
+and identifying milestones.
+
+Record:
+
+- Contribution prepared: the date the contribution draft was written.
+- Calendar window: the dates when the underlying autoresearch observations occurred, not the draft,
+  review, or file-modification dates. Use exact start and end dates when known, otherwise month,
+  quarter, or year.
+- Observation period: several days, several weeks, several months, or longer.
+- Usage pattern: one concentrated campaign, several campaigns, intermittent use, or continuous use.
+- Project phase: early exploration, implementation, optimization, validation, deployment preparation,
+  maintenance, or multiple phases.
+- Search intensity: low, moderate, high, or very high.
+- Parallelism: primarily sequential, limited parallel proposal work, or broad parallel search.
+- Human involvement: mostly autonomous, periodic review, frequent steering, or tightly supervised.
+- Resource intensity: light, moderate, or heavy relative to the project, without exact compute or cost.
+- Breadth: isolated component, several components, or project-wide methodology.
+- Starting infrastructure: the evaluator, ledger, worker isolation, orchestration, recovery, and
+  promotion capabilities available when the observations began.
+- Ending infrastructure: the same capabilities at the end of the observation window.
+- Infrastructure changes: which findings were observed before or after major harness improvements.
+- Decision influence: advisory, useful, important, or critical to major project decisions.
+- Outcome contribution: little value, mixed value, meaningful acceleration, key discoveries, stronger
+  validation, prevented failures, or essential project infrastructure.
+- Counterfactual: what likely would have been slower, weaker, missed, or unchanged without autoresearch.
+
+Separate usage intensity from usefulness. A highly intensive campaign may produce little value, while
+a small targeted experiment may prevent an important mistake. Also separate raw candidate generation
+from the value of evaluation design, research memory, auditing, or orchestration.
+
+Describe infrastructure through concrete capabilities rather than a single maturity label. At minimum,
+record whether each end of the observation window had:
+
+- A frozen or worker-writable evaluator.
+- A structured experiment ledger and exclusion map.
+- Disposable or isolated workers.
+- A persistent orchestrator or manually launched sessions.
+- Explicit discovery and promotion gates.
+- Effective-configuration and artifact identity checks.
+- Timeout, crash, resume, cleanup, and restoration handling.
+- Shared-resource admission and measurement serialization.
+- Progress-freshness monitoring and named blocked states.
+- Independent review or a designated judgment owner.
+
+## Draft template
+
+Write one file to `/code/autoresearch/.local/contributions/PROJECT_LABEL.md`. Use a short,
+human-readable local label that will help the curator recognize the source project. The `.local/`
+directory is excluded through `.gitignore` and must remain untracked, so its filenames are not
+part of the public privacy boundary.
+
+```text
+# Autoresearch contribution draft
+
+Privacy status:
+Sanitized for anonymized mode, or publication-authorized for public full-detail mode
+Evidence basis:
+Anonymized observations, or named public project evidence with links and revisions
+Intended use: editorial input, not direct publication
+Disclosure mode:
+Anonymized or public full-detail
+Publication authorization:
+Required for public full-detail mode. Record the authorizing person or source and date locally.
+Contribution prepared:
+YYYY-MM-DD
+
+Project identity:
+In anonymized mode, write "withheld." In public full-detail mode, provide the authorized public name,
+domain, repository URL, and relevant public revision.
+
+## Exposure and project impact
+
+Calendar window:
+Give the dates when the observations occurred, not the report date. Use exact start and end dates when
+known. Otherwise provide month, quarter, or year.
+
+Observation period:
+Use a coarse duration band.
+
+Usage pattern:
+Concentrated, repeated, intermittent, or continuous.
+
+Project phases:
+List broad phases without identifying milestones.
+
+Search intensity:
+Low, moderate, high, or very high.
+
+Parallelism:
+Primarily sequential, limited parallel proposal work, broad parallel search, or another concise
+description. Separate reasoning parallelism from measurement parallelism where relevant.
+
+Human involvement:
+Mostly autonomous, periodic review, frequent steering, or tightly supervised.
+
+Resource intensity:
+Light, moderate, or heavy relative to the project.
+
+Breadth:
+Isolated component, several components, or project-wide methodology.
+
+Starting infrastructure:
+Describe the evaluator, experiment ledger, worker isolation, orchestration, recovery, promotion
+gates, and monitoring present at the beginning.
+
+Ending infrastructure:
+Describe the same capabilities at the end.
+
+Infrastructure changes:
+State which observations came from the earlier setup and which followed major harness improvements.
+Use the capability checklist from the contribution guide rather than relying only on a maturity label.
+
+Decision influence:
+Advisory, useful, important, or critical.
+
+Outcome contribution:
+State whether it accelerated work, produced key discoveries, strengthened validation, prevented
+failures, supplied infrastructure, or had mixed or little value.
+
+Counterfactual:
+What likely would have happened without autoresearch. State uncertainty.
+
+## Material new learnings
+
+### Short descriptive title
+
+Observation window:
+State when this specific behavior was observed within the overall calendar window.
+
+Infrastructure context:
+State the evaluator, ledger, isolation, orchestration, promotion, recovery, and monitoring capabilities
+that materially affected this observation.
+
+Observation:
+What happened, stated without identifying details.
+
+Interpretation:
+The proposed general lesson and causal explanation.
+
+Evidence class:
+One of the four evidence classes in the contribution guide.
+
+Confidence:
+Low, medium, or high.
+
+Boundary conditions:
+When the learning may not transfer.
+
+Maturity dependence:
+State whether the finding is likely about the model or research method, the infrastructure available at
+the time, or an interaction between them.
+
+Cheapest falsification:
+How another project could test whether the lesson applies.
+
+Existing synthesis relationship:
+State whether this is new, strengthens an existing principle, qualifies it, or contradicts it. Name
+the relevant heading in the existing learnings.
+
+Suggested destination:
+principles.md, agent-search-retrospective.md, a domain playbook, or no promotion yet.
+
+## LLM and agent observations
+
+For every named model or agent system used, record:
+
+- Public model or product name.
+- Calendar window in which it was observed.
+- Exact model version or route when known.
+- Role it performed.
+- What it was consistently good at.
+- What it was consistently bad at.
+- Relative speed or cost in qualitative terms only.
+- Recurring failure patterns.
+- Best role assignment.
+- Evidence strength as low, medium, or high, without exact counts.
+- Possible dependence on version, provider routing, prompting, tools, or harness design.
+
+Do not reveal the private task or application domain.
+
+## Findings that should remain private
+
+List only categories of useful material that were intentionally excluded. Do not include the
+sensitive content itself.
+
+## Findings not ready for promotion
+
+Record plausible observations that lack evidence, have unresolved confounders, or may be
+project-specific.
+
+## Proposed wording
+
+Provide concise, publication-ready wording for the strongest findings. It must be understandable
+without knowing the source project.
+
+## Disclosure audit
+
+For anonymized mode, report whether the completed draft contains project identifiers, private paths,
+domain fingerprints, exact metrics, internal terminology, private URLs, hashes, or identifying
+combinations of details. Remove or generalize anything uncertain before reporting that the audit
+passed.
+
+For public full-detail mode, run a publication audit instead. Confirm that every identifying detail,
+metric, link, revision, and operational fact is authorized for publication. Independently check for
+credentials, personal data, confidential third-party information, private endpoints, unpublished
+conversations, and security-sensitive details. Remove anything outside the authorization boundary.
+```
+
+## Instructions for contributing agents
+
+An agent following this guide must:
+
+- Treat the current private workspace as evidence to summarize, not material to copy.
+- Avoid copying raw records, logs, prompts, code, or long quotations into the draft.
+- Avoid running Git commands or editing tracked files in `/code/autoresearch`.
+- Record the local calendar window and infrastructure maturity. Publish exact or generalized dates
+  according to the declared disclosure mode and authorization boundary.
+- State the disclosure mode and never infer full-detail authorization merely from repository visibility.
+- Prefer a short set of defensible findings over an exhaustive project narrative.
+- State uncertainty and unresolved confounders explicitly.
+- Write only the sanitized draft under `/code/autoresearch/.local/contributions/`.
+- End its response with the draft path and whether the applicable redaction or publication audit passed.
+
+## Curator review
+
+Before promotion, the curator should:
+
+- Verify the declared disclosure mode and, for full-detail publication, its explicit authorization.
+- Repeat the applicable privacy or publication audit without opening unnecessary private records.
+- Compare the draft against existing learnings for duplication.
+- Verify that the calendar window describes the actual observations rather than file dates or the date
+  the contribution was written.
+- Calibrate confidence against the observation period, intensity, independence, and breadth of use.
+- Check whether a model or workflow observation depends on the infrastructure available during that
+  calendar window rather than on the model itself.
+- Compare the contribution against newer case studies and current harness capabilities. Mark older
+  findings as legacy, superseded, narrowed, or requiring retest when the infrastructure scope changed.
+- Check that claimed project impact includes a plausible counterfactual and is not inferred from
+  experiment volume alone.
+- Check whether observations and interpretations are clearly separated.
+- Reject claims whose useful meaning depends on restoring private details.
+- Preserve model names only when their role-specific behavior is informative.
+- Merge accepted wording into the smallest relevant existing document.
+- Update review dates and source relationships where appropriate.
+- Keep the local contribution draft out of Git.
+
+## Publishing anonymized case studies
+
+The curator may publish a contribution as a case study after integrating its durable findings. Keep
+the complete contribution draft local and create a separate curated file under `case-studies/`.
+
+A public case study should retain:
+
+- A coarse or exact calendar window when publication is safe.
+- Duration, intensity, project phases, parallelism, and human involvement.
+- Starting infrastructure, ending infrastructure, and the timing of material harness changes.
+- Project impact and a qualified counterfactual.
+- Named public models and role-specific observations.
+- Material findings, provisional hypotheses, and evidence limits.
+
+It should remove editorial routing fields, repeated proposed wording, private-content inventories,
+local paths, identifying operational combinations, and unnecessary implementation detail. Use a
+neutral title based on research shape rather than the application domain.
+
+Do not mark a case study ready for publication while its calendar window, starting infrastructure,
+ending infrastructure, or material infrastructure-change timing remains unknown. A clearly labeled
+draft may retain pending fields while the source project backfills them.
+
+Local contribution drafts are inputs to editorial judgment and case-study curation. They are not
+published directly.
+
+## Publishing full-detail project reports
+
+For an authorized public project, the curator may publish a named report instead of an anonymized case
+study. Use a human-readable project title and link claims to public commits, evaluations, issues, or
+other authorized evidence where practical.
+
+The report should make the timeline and infrastructure evolution explicit, distinguish discovery from
+promotion runs, preserve failed interventions and provisional hypotheses, and state how materially
+autoresearch affected the project. It should also identify which observations are likely specific to
+the model version, provider route, harness maturity, hardware, or workload.
+
+When a report describes an older or materially simpler harness, label it prominently as legacy
+evidence. Do not present its autonomy, throughput, or model limitations as current capability claims
+without reproduction on the newer infrastructure.
+
+Full-detail reports still require the publication audit. Public project identity does not weaken the
+rules against secrets, personal data, third-party confidentiality, or unsupported claims.
