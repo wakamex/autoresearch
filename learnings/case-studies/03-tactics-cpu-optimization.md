@@ -4,6 +4,7 @@
   "title": "Tactics.md CPU self-play optimization",
   "started": "2026-03-10",
   "ended": "2026-03-11",
+  "token_estimate": {"processed_tokens": 669000000, "effective_tokens": 86000000, "confidence": "high"},
   "summary_markdown": "[Tactics.md](https://tactics.md/) used Codex to test 102 interventions on the CPU pipeline generating self-play training games, accelerating turn search and quantized neural evaluation while uncovering eight correctness defects. Narrow component benchmarks repeatedly misled; only full-turn replay and end-to-end self-play could distinguish real speedups from changed game behavior."
 }
 ---

@@ -5,6 +5,7 @@
   "started": "2026-08-08",
   "ended": "2026-08-11",
   "featured_rank": 3,
+  "token_estimate": {"processed_tokens": 1150000000, "effective_tokens": 143000000, "confidence": "high"},
   "summary_markdown": "Quantitative-trading autoresearch sustained 46 agent-led research cycles in eight hours, implementing 39 strategies and retaining 35 development results that passed causal-attribution checks while sealed future data stayed untouched. Shared-capital replay mapped the development tradeoff between profit and volume. Gemini 3.6 Flash remained the historical bandit leader after completing 10 of 10 cycles; in a later panel, GPT-5.6 Luna medium received similar internal ratings to Sol medium at under one-twentieth the API-equivalent cost."
 }
 ---

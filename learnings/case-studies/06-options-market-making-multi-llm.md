@@ -4,6 +4,7 @@
   "title": "Options market-making research with multiple LLMs",
   "started": "2026-06-22",
   "ended": "2026-07-10",
+  "token_estimate": {"processed_tokens": 3520000000, "effective_tokens": 500000000, "confidence": "high"},
   "summary_markdown": "Options market-making research used GPT-5.5 for implementation, Gemini 3.5 Flash for candidate generation and reflection, and Fable 5 for judgment and stopping decisions. An independent audit found gaps between the research record and implemented system. One candidate failed a causal correction and its replacement survived bounded validation, but the historical return disappeared in a short fresh window with stronger quote competition."
 }
 ---

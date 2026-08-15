@@ -21,6 +21,7 @@ END_MARKER = "<!-- generated-case-studies:end -->"
 REPOSITORY_URL = "https://github.com/wakamex/autoresearch"
 COLLECTION_TITLE = "Autoresearch case studies"
 LINK_RE = re.compile(r"\[([^]]+)\]\((https?://[^)]+)\)")
+TOKEN_CONFIDENCE = {"high", "medium", "low"}
 
 
 @dataclass(frozen=True)
@@ -35,6 +36,7 @@ class CaseStudy:
     links: list[dict[str, str]]
     word_count: int
     featured_rank: int | None
+    token_estimate: dict[str, int | str]
 
     @property
     def slug(self) -> str:
@@ -68,7 +70,7 @@ def parse_report(path: Path) -> CaseStudy:
         raise ValueError(f"{path}: invalid JSON frontmatter: {error}") from error
 
     required = {"case", "title", "started", "ended", "summary_markdown"}
-    allowed = required | {"featured_rank"}
+    allowed = required | {"featured_rank", "token_estimate"}
     missing = required - metadata.keys()
     extra = metadata.keys() - allowed
     if missing or extra:
@@ -87,6 +89,25 @@ def parse_report(path: Path) -> CaseStudy:
         isinstance(featured_rank, bool) or not isinstance(featured_rank, int) or featured_rank < 1
     ):
         raise ValueError(f"{path}: featured_rank must be a positive integer")
+
+    token_estimate = metadata.get("token_estimate")
+    if not isinstance(token_estimate, dict):
+        raise ValueError(f"{path}: token_estimate must be an object")
+    expected_token_fields = {"processed_tokens", "effective_tokens", "confidence"}
+    if set(token_estimate) != expected_token_fields:
+        raise ValueError(
+            f"{path}: token_estimate keys must be {sorted(expected_token_fields)}"
+        )
+    for field in ("processed_tokens", "effective_tokens"):
+        value = token_estimate[field]
+        if isinstance(value, bool) or not isinstance(value, int) or value < 0:
+            raise ValueError(f"{path}: token_estimate.{field} must be a non-negative integer")
+    if token_estimate["effective_tokens"] > token_estimate["processed_tokens"]:
+        raise ValueError(f"{path}: effective token estimate exceeds processed token estimate")
+    if token_estimate["confidence"] not in TOKEN_CONFIDENCE:
+        raise ValueError(
+            f"{path}: token_estimate.confidence must be one of {sorted(TOKEN_CONFIDENCE)}"
+        )
 
     started = date.fromisoformat(metadata["started"])
     ended = date.fromisoformat(metadata["ended"])
@@ -120,6 +141,7 @@ def parse_report(path: Path) -> CaseStudy:
         links=links,
         word_count=len(body.split()),
         featured_rank=featured_rank,
+        token_estimate=token_estimate,
     )
 
 
@@ -141,15 +163,29 @@ def load_cases() -> list[CaseStudy]:
     return cases
 
 
+def format_effective_tokens(tokens: int) -> str:
+    if tokens >= 1_000_000_000:
+        value = f"{tokens / 1_000_000_000:.2f}".rstrip("0").rstrip(".")
+        return f"~{value}B"
+    if tokens >= 1_000_000:
+        value = f"{tokens / 1_000_000:.1f}".rstrip("0").rstrip(".")
+        return f"~{value}M"
+    if tokens >= 1_000:
+        value = f"{tokens / 1_000:.1f}".rstrip("0").rstrip(".")
+        return f"~{value}K"
+    return f"~{tokens}"
+
+
 def render_table(cases: list[CaseStudy]) -> str:
     rows = [
-        "| Case | What happened | Length | When |",
+        "| Case | What happened | Effective tokens | When |",
         "|---|---|---:|---|",
     ]
     for case in cases:
         rows.append(
             f"| [`{case.filename}`]({case.filename}) | {case.summary_markdown} "
-            f"| {case.word_count:,} words | {case.started} to {case.ended} |"
+            f"| {format_effective_tokens(case.token_estimate['effective_tokens'])} "
+            f"| {case.started} to {case.ended} |"
         )
     return "\n".join(rows)
 
@@ -163,8 +199,10 @@ def render_readme(current: str, cases: list[CaseStudy]) -> str:
 
 
 def render_json(cases: list[CaseStudy]) -> str:
+    processed_tokens = sum(case.token_estimate["processed_tokens"] for case in cases)
+    effective_tokens = sum(case.token_estimate["effective_tokens"] for case in cases)
     payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "title": COLLECTION_TITLE,
         "description": (
             f"{len(cases)} chronological field reports on using autoresearch in applied projects, "
@@ -172,6 +210,17 @@ def render_json(cases: list[CaseStudy]) -> str:
         ),
         "updated": max(case.ended for case in cases),
         "repository_url": REPOSITORY_URL,
+        "token_estimates": {
+            "processed_tokens": processed_tokens,
+            "effective_tokens": effective_tokens,
+            "method": (
+                "Rounded estimates from retained local session records. Processed tokens include "
+                "input, output, cache-write, and cache-read tokens. Effective tokens are an "
+                "uncached-equivalent proxy calculated as processed tokens minus 90% of cache-read "
+                "tokens. Reconstructed provider records and day-level attribution introduce "
+                "uncertainty."
+            ),
+        },
         "cases": [
             {
                 "case": case.number,
@@ -185,6 +234,7 @@ def render_json(cases: list[CaseStudy]) -> str:
                 "links": case.links,
                 "word_count": case.word_count,
                 "featured_rank": case.featured_rank,
+                "token_estimate": case.token_estimate,
                 "report_url": case.report_url,
                 "raw_url": case.raw_url,
             }

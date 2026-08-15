@@ -5,6 +5,7 @@
   "started": "2026-08-06",
   "ended": "2026-08-08",
   "featured_rank": 2,
+  "token_estimate": {"processed_tokens": 1090000000, "effective_tokens": 144000000, "confidence": "high"},
   "summary_markdown": "[FreeTranscribe.org](https://freetranscribe.org/) doubled transcription throughput while sharing one RTX 3090 between live production and autoresearch. Error counts stayed unchanged across 295 broad cases and fell from 105 to 103 on a reviewed long-form set."
 }
 ---

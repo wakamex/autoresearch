@@ -5,6 +5,7 @@
   "started": "2026-04-15",
   "ended": "2026-05-08",
   "featured_rank": 1,
+  "token_estimate": {"processed_tokens": 831000000, "effective_tokens": 118000000, "confidence": "high"},
   "summary_markdown": "[Tactics.md](https://tactics.md/) used autoresearch to train neural models that evaluated positions inside its game-tree search, testing architecture size, training targets, quantization, and self-play across 435 result bundles. Under the same 10 millisecond move budget, a model that evaluated each position 73 times more slowly still won because its judgments were better, while the model with the best validation loss played worst among matched candidates."
 }
 ---

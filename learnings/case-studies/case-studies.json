@@ -1,9 +1,14 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "title": "Autoresearch case studies",
   "description": "10 chronological field reports on using autoresearch in applied projects, including what worked, what failed, and how the research infrastructure evolved.",
   "updated": "2026-08-11",
   "repository_url": "https://github.com/wakamex/autoresearch",
+  "token_estimates": {
+    "processed_tokens": 19690000000,
+    "effective_tokens": 2699000000,
+    "method": "Rounded estimates from retained local session records. Processed tokens include input, output, cache-write, and cache-read tokens. Effective tokens are an uncached-equivalent proxy calculated as processed tokens minus 90% of cache-read tokens. Reconstructed provider records and day-level attribution introduce uncertainty."
+  },
   "cases": [
     {
       "case": 1,
@@ -22,6 +27,11 @@
       ],
       "word_count": 1379,
       "featured_rank": null,
+      "token_estimate": {
+        "processed_tokens": 239000000,
+        "effective_tokens": 33000000,
+        "confidence": "high"
+      },
       "report_url": "https://github.com/wakamex/autoresearch/blob/master/learnings/case-studies/01-mnk-transfer.md",
       "raw_url": "https://raw.githubusercontent.com/wakamex/autoresearch/master/learnings/case-studies/01-mnk-transfer.md"
     },
@@ -42,6 +52,11 @@
       ],
       "word_count": 1292,
       "featured_rank": null,
+      "token_estimate": {
+        "processed_tokens": 9340000000,
+        "effective_tokens": 1320000000,
+        "confidence": "high"
+      },
       "report_url": "https://github.com/wakamex/autoresearch/blob/master/learnings/case-studies/02-tactics-search.md",
       "raw_url": "https://raw.githubusercontent.com/wakamex/autoresearch/master/learnings/case-studies/02-tactics-search.md"
     },
@@ -62,6 +77,11 @@
       ],
       "word_count": 978,
       "featured_rank": null,
+      "token_estimate": {
+        "processed_tokens": 669000000,
+        "effective_tokens": 86000000,
+        "confidence": "high"
+      },
       "report_url": "https://github.com/wakamex/autoresearch/blob/master/learnings/case-studies/03-tactics-cpu-optimization.md",
       "raw_url": "https://raw.githubusercontent.com/wakamex/autoresearch/master/learnings/case-studies/03-tactics-cpu-optimization.md"
     },
@@ -82,6 +102,11 @@
       ],
       "word_count": 1305,
       "featured_rank": null,
+      "token_estimate": {
+        "processed_tokens": 342000000,
+        "effective_tokens": 47000000,
+        "confidence": "high"
+      },
       "report_url": "https://github.com/wakamex/autoresearch/blob/master/learnings/case-studies/04-gradient-bang-automation.md",
       "raw_url": "https://raw.githubusercontent.com/wakamex/autoresearch/master/learnings/case-studies/04-gradient-bang-automation.md"
     },
@@ -102,6 +127,11 @@
       ],
       "word_count": 1264,
       "featured_rank": 1,
+      "token_estimate": {
+        "processed_tokens": 831000000,
+        "effective_tokens": 118000000,
+        "confidence": "high"
+      },
       "report_url": "https://github.com/wakamex/autoresearch/blob/master/learnings/case-studies/05-tactics-neural-evaluators.md",
       "raw_url": "https://raw.githubusercontent.com/wakamex/autoresearch/master/learnings/case-studies/05-tactics-neural-evaluators.md"
     },
@@ -117,6 +147,11 @@
       "links": [],
       "word_count": 1557,
       "featured_rank": null,
+      "token_estimate": {
+        "processed_tokens": 3520000000,
+        "effective_tokens": 500000000,
+        "confidence": "high"
+      },
       "report_url": "https://github.com/wakamex/autoresearch/blob/master/learnings/case-studies/06-options-market-making-multi-llm.md",
       "raw_url": "https://raw.githubusercontent.com/wakamex/autoresearch/master/learnings/case-studies/06-options-market-making-multi-llm.md"
     },
@@ -137,6 +172,11 @@
       ],
       "word_count": 1066,
       "featured_rank": null,
+      "token_estimate": {
+        "processed_tokens": 2010000000,
+        "effective_tokens": 240000000,
+        "confidence": "high"
+      },
       "report_url": "https://github.com/wakamex/autoresearch/blob/master/learnings/case-studies/07-flysim-sim-to-live.md",
       "raw_url": "https://raw.githubusercontent.com/wakamex/autoresearch/master/learnings/case-studies/07-flysim-sim-to-live.md"
     },
@@ -152,6 +192,11 @@
       "links": [],
       "word_count": 1666,
       "featured_rank": null,
+      "token_estimate": {
+        "processed_tokens": 499000000,
+        "effective_tokens": 68000000,
+        "confidence": "high"
+      },
       "report_url": "https://github.com/wakamex/autoresearch/blob/master/learnings/case-studies/08-strategy-game-multi-model-playtesting.md",
       "raw_url": "https://raw.githubusercontent.com/wakamex/autoresearch/master/learnings/case-studies/08-strategy-game-multi-model-playtesting.md"
     },
@@ -172,6 +217,11 @@
       ],
       "word_count": 1476,
       "featured_rank": 2,
+      "token_estimate": {
+        "processed_tokens": 1090000000,
+        "effective_tokens": 144000000,
+        "confidence": "high"
+      },
       "report_url": "https://github.com/wakamex/autoresearch/blob/master/learnings/case-studies/09-freetranscribe-gpu-inference.md",
       "raw_url": "https://raw.githubusercontent.com/wakamex/autoresearch/master/learnings/case-studies/09-freetranscribe-gpu-inference.md"
     },
@@ -187,6 +237,11 @@
       "links": [],
       "word_count": 1789,
       "featured_rank": 3,
+      "token_estimate": {
+        "processed_tokens": 1150000000,
+        "effective_tokens": 143000000,
+        "confidence": "high"
+      },
       "report_url": "https://github.com/wakamex/autoresearch/blob/master/learnings/case-studies/10-trading-strategy-search.md",
       "raw_url": "https://raw.githubusercontent.com/wakamex/autoresearch/master/learnings/case-studies/10-trading-strategy-search.md"
     }
