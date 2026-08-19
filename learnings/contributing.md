@@ -47,6 +47,12 @@ Repeating an existing conclusion without new evidence or qualification is not a 
 Use this mode for private projects or whenever identifying the application is unnecessary. Follow the
 privacy boundary below and publish only a neutral, sanitized case study.
 
+Anonymized describes what identity is withheld, not how abstract every other detail must be. The
+strict boundary in this guide is the default. A project owner may explicitly authorize a narrower,
+project-specific boundary that retains selected context or methodological detail while continuing to
+withhold the project identity. Record the allowed and withheld categories in the local contribution.
+Do not reuse one project's authorization for another project.
+
 ### Public full-detail
 
 Use this mode only when the project owner explicitly authorizes detailed publication. A public
@@ -108,9 +114,8 @@ authorized publication of the contributor's work and the authorization date in t
 
 ## Privacy boundary
 
-This section applies to anonymized mode.
-
-Do not include or imply:
+This section applies to anonymized mode. Unless the local contribution records an explicit exception,
+do not include or imply:
 
 - Project, repository, company, client, protocol, product, or internal system names.
 - Filesystem paths from the source project.
@@ -123,12 +128,31 @@ Do not include or imply:
 - Private URLs, commit hashes, filenames, schemas, logs, prompts, or quotations.
 - Combinations of otherwise harmless details that could fingerprint the project.
 
+Project-specific authorization may retain any of the following without changing the contribution to
+named-private or public full-detail mode:
+
+- The application domain while withholding the project, asset class, instruments, venues, users, and
+  counterparties.
+- Exact observation dates, campaign durations, and aggregate experiment, completion, resource, or
+  dataset-scale figures.
+- Public model routes, effort levels, aggregate ratings, token accounting, and API-equivalent costs.
+- Generic operational and evaluation descriptions, including categories of public input data,
+  artifact and effective-configuration hashing, shared-resource replay, and non-proprietary screening
+  procedures.
+
+These exceptions do not authorize project identity, repository details, source paths, specific assets
+or markets, loaded private settings, proprietary strategy mechanics or names, exact private economic
+outcomes, credentials, private endpoints, personal data, confidential third-party material, or raw
+private artifacts. A permitted combination must still be generalized if it would identify the project
+or disclose a withheld category.
+
 It is acceptable to name publicly available LLMs, agent products, and runners. In anonymized mode,
-describe role-specific strengths and weaknesses without revealing the private task. Named detailed and
-public full-detail modes may retain authorized task context.
+describe role-specific strengths and weaknesses within the recorded disclosure boundary. Named
+detailed and public full-detail modes may retain authorized task context.
 
 General public principles about trading, software optimization, evaluation, or autonomous agents are
-also acceptable. Do not state which of those domains the source project applied.
+also acceptable. State which domain the source project applied only when the local contribution
+explicitly authorizes domain disclosure.
 
 When uncertain whether a detail is identifying, remove or generalize it.
 
@@ -170,8 +194,9 @@ Useful findings often concern:
 Every draft should describe when and how much opportunity the project had to observe the autoresearch
 workflow. This helps distinguish a short evaluation on basic infrastructure from a mature operating
 pattern. Local ignored drafts should record the calendar window. Public synthesis may generalize that
-window when an exact date would identify the project. In anonymized mode, continue to use coarse bands
-for counts, costs, and identifying milestones. Named detailed and public full-detail modes may retain
+window when an exact date would identify the project. In anonymized mode, use coarse bands for counts,
+costs, and identifying milestones by default, but retain exact aggregate values when the local
+contribution explicitly authorizes them. Named detailed and public full-detail modes may retain
 authorized exact values.
 
 Record:
@@ -187,8 +212,9 @@ Record:
 - Search intensity: low, moderate, high, or very high.
 - Parallelism: primarily sequential, limited parallel proposal work, or broad parallel search.
 - Human involvement: mostly autonomous, periodic review, frequent steering, or tightly supervised.
-- Resource intensity: use a qualitative band in anonymized mode. Named detailed and public full-detail
-  modes may retain authorized exact compute or cost.
+- Resource intensity: use a qualitative band in anonymized mode unless exact aggregate compute or cost
+  is explicitly authorized. Named detailed and public full-detail modes may retain authorized exact
+  compute or cost.
 - Breadth: isolated component, several components, or project-wide methodology.
 - Starting infrastructure: the evaluator, ledger, worker isolation, orchestration, recovery, and
   promotion capabilities available when the observations began.
@@ -238,15 +264,17 @@ Disclosure mode:
 Anonymized, named detailed with private repository, or public full-detail
 Publication authorization:
 Required for named detailed and public full-detail modes. Record the authorizing person or source and
-date locally.
+date locally. For anonymized mode, record any explicitly authorized exceptions to the strict privacy
+boundary and the categories that remain withheld.
 Contribution prepared:
 YYYY-MM-DD
 
 Project identity:
-In anonymized mode, write "withheld." In public full-detail mode, provide the authorized public name,
-domain, repository URL, and relevant public revision. In named detailed private-repository mode,
-provide the authorized project name and domain, state that the repository is private, and do not
-include its URL or private revisions.
+In anonymized mode, write "withheld" and state whether the domain is withheld or explicitly authorized
+for publication. In public full-detail mode, provide the authorized public name, domain, repository
+URL, and relevant public revision. In named detailed private-repository mode, provide the authorized
+project name and domain, state that the repository is private, and do not include its URL or private
+revisions.
 
 ## Exposure and project impact
 
@@ -261,8 +289,8 @@ Usage pattern:
 Concentrated, repeated, intermittent, or continuous.
 
 Project phases:
-List broad phases. Anonymized mode must avoid identifying milestones; named detailed and public
-full-detail modes may retain authorized specifics.
+List broad phases. Anonymized mode must avoid identifying milestones unless the recorded boundary
+authorizes them; named detailed and public full-detail modes may retain authorized specifics.
 
 Search intensity:
 Low, moderate, high, or very high.
@@ -275,8 +303,9 @@ Human involvement:
 Mostly autonomous, periodic review, frequent steering, or tightly supervised.
 
 Resource intensity:
-Use a qualitative band in anonymized mode. Named detailed and public full-detail modes may retain
-authorized exact counts, compute, time, or cost.
+Use a qualitative band in anonymized mode unless the recorded boundary authorizes exact aggregate
+counts, compute, time, or cost. Named detailed and public full-detail modes may retain authorized exact
+values.
 
 Breadth:
 Isolated component, several components, or project-wide methodology.
@@ -314,8 +343,9 @@ State the evaluator, ledger, isolation, orchestration, promotion, recovery, and 
 that materially affected this observation.
 
 Observation:
-What happened. Remove identifying details in anonymized mode; retain authorized concrete context in
-named detailed or public full-detail mode.
+What happened. Remove identifying details in anonymized mode, but retain concrete context authorized
+by its recorded project-specific boundary. Named detailed or public full-detail mode may retain other
+authorized concrete context.
 
 Interpretation:
 The proposed general lesson and causal explanation.
@@ -353,17 +383,18 @@ For every named model or agent system used, record:
 - Role it performed.
 - What it was consistently good at.
 - What it was consistently bad at.
-- Relative speed or cost. Use qualitative terms in anonymized mode; retain authorized exact values in
-  named detailed or public full-detail mode when useful.
+- Relative speed or cost. Use qualitative terms in anonymized mode unless exact aggregate values are
+  explicitly authorized. Retain authorized exact values in named detailed or public full-detail mode
+  when useful.
 - Recurring failure patterns.
 - Best role assignment.
-- Evidence strength as low, medium, or high. Named detailed and public full-detail modes may also
-  retain authorized exact counts.
+- Evidence strength as low, medium, or high. Anonymized mode may retain explicitly authorized aggregate
+  counts. Named detailed and public full-detail modes may also retain authorized exact counts.
 - Possible dependence on version, provider routing, prompting, tools, or harness design.
 
-In anonymized mode, do not reveal the private task or application domain. In named detailed mode,
-retain authorized task context that makes the model observation understandable without reproducing
-private repository content.
+In anonymized mode, do not reveal the private task or application domain unless the recorded boundary
+explicitly authorizes that context. In named detailed mode, retain authorized task context that makes
+the model observation understandable without reproducing private repository content.
 
 ## Findings that should remain unpublished
 
@@ -383,10 +414,11 @@ without knowing the source project.
 
 ## Disclosure audit
 
-For anonymized mode, report whether the completed draft contains project identifiers, private paths,
-domain fingerprints, exact metrics, internal terminology, private URLs, hashes, or identifying
-combinations of details. Remove or generalize anything uncertain before reporting that the audit
-passed.
+For anonymized mode, compare the completed draft against the locally recorded allowed and withheld
+categories. Report whether it contains project identifiers, private paths, unauthorized domain
+fingerprints, unauthorized exact metrics, proprietary terminology, private URLs, raw hashes, or
+identifying combinations of details. Remove or generalize anything outside the boundary before
+reporting that the audit passed.
 
 For public full-detail mode, run a publication audit instead. Confirm that every identifying detail,
 metric, link, revision, and operational fact is authorized for publication. Independently check for
@@ -421,8 +453,8 @@ An agent following this guide must:
 
 Before promotion, the curator should:
 
-- Verify the declared disclosure mode and explicit authorization for named detailed or public
-  full-detail publication.
+- Verify the declared disclosure mode, any anonymized-mode exceptions, and explicit authorization for
+  named detailed or public full-detail publication.
 - Repeat the applicable privacy or publication audit without opening unnecessary private records.
 - Compare the draft against existing learnings for duplication.
 - Verify that the calendar window describes the actual observations rather than file dates or the date
@@ -435,9 +467,10 @@ Before promotion, the curator should:
 - Check that claimed project impact includes a plausible counterfactual and is not inferred from
   experiment volume alone.
 - Check whether observations and interpretations are clearly separated.
-- In anonymized mode, reject claims whose useful meaning depends on restoring private details. In named
-  detailed mode, include authorized details when they materially improve meaning, while excluding
-  repository-owned content.
+- In anonymized mode, reject claims whose useful meaning depends on restoring withheld details, but
+  retain explicitly authorized domain, aggregate, and methodological context when it improves meaning.
+  In named detailed mode, include authorized details when they materially improve meaning, while
+  excluding repository-owned content.
 - Preserve model names only when their role-specific behavior is informative.
 - Merge accepted wording into the smallest relevant existing document.
 - Update review dates and source relationships where appropriate.
@@ -456,10 +489,13 @@ A public case study should retain:
 - Project impact and a qualified counterfactual.
 - Named public models and role-specific observations.
 - Material findings, provisional hypotheses, and evidence limits.
+- Any domain, aggregate metrics, dataset scale, or generic operational detail explicitly authorized by
+  the recorded anonymized boundary.
 
 It should remove editorial routing fields, repeated proposed wording, private-content inventories,
-local paths, identifying operational combinations, and unnecessary implementation detail. Use a
-neutral title based on research shape rather than the application domain.
+local paths, unauthorized identifying operational combinations, and unnecessary implementation
+detail. Use a neutral title based on research shape by default; an explicitly authorized domain may
+appear in the title.
 
 Do not mark a case study ready for publication while its calendar window, starting infrastructure,
 ending infrastructure, or material infrastructure-change timing remains unknown. A clearly labeled
