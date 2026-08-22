@@ -3,24 +3,24 @@
   "case": 10,
   "title": "Adaptive quantitative-trading strategy search",
   "started": "2026-08-08",
-  "ended": "2026-08-14",
+  "ended": "2026-08-22",
   "featured_rank": 3,
   "token_estimate": {"processed_tokens": 25500000000, "effective_tokens": 3000000000, "confidence": "high"},
-  "summary_markdown": "Quantitative-trading autoresearch tested 1,807 unique policy-operation variants, then ran 93 mechanism-first research cycles across two long-running campaigns and completed 73 economic evaluations while sealed future data stayed untouched. A staged universe analysis screened 858 markets, showed that blindly expanding a 20-market policy failed, and grew the forward data regime from 20 to 42 markets with richer hash-bound evidence."
+  "summary_markdown": "Quantitative-trading autoresearch tested 1,807 unique policy-operation variants, then ran 122 mechanism-first research cycles across three long-running campaigns and completed 97 economic evaluations while sealed future data stayed untouched. A staged universe analysis screened 858 markets, grew the forward regime from 20 to 42 markets, and the latest 123 million-event replay found that the added markets drove the result while simpler market making beat more elaborate variants."
 }
 ---
 
 # Case 10 - Adaptive quantitative-trading strategy search
 
-Observation window: 2026-08-08 through 2026-08-14
+Observation window: 2026-08-08 through 2026-08-22
 Disclosure mode: anonymized with authorized domain and aggregate methodological detail
-Duration: seven calendar days, including concentrated eight-hour and ten-hour campaigns
+Duration: fifteen calendar days, including two eight-hour campaigns and one ten-hour campaign
 Application domain: quantitative trading; project identity and asset class withheld
 
 ## What was researched
 
 The project searched over rules for a quantitative trading strategy using historical data. Its first
-phase tested 1,807 unique policy-operation variants across 94 batches. Two later
+phase tested 1,807 unique policy-operation variants across 94 batches. Three later
 campaigns changed the unit of work: each model cycle had to propose one causal mechanism, implement
 one complete strategy, and evaluate it once across a frozen market panel. A labeled sealed future
 period remained untouched for a later final test.
@@ -32,7 +32,7 @@ and whether a long-running agent was continuously testing useful hypotheses.
 
 ## Exposure
 
-- Usage pattern: two concentrated campaigns with repeated experimental batches and follow-up audits.
+- Usage pattern: three concentrated campaigns with repeated experimental batches and follow-up audits.
 - Project phases: exploration, implementation, optimization, portfolio evaluation, validation design, and deployment preparation.
 - Search intensity: very high.
 - Parallelism: primarily sequential execution with limited parallel proposal work.
@@ -58,10 +58,11 @@ action timing violated the declared delay. The campaign included 12 new mechanis
 or portfolio-aware policies, with no infrastructure-only batch.
 
 The next frozen snapshot supported a ten-hour follow-on campaign and two direct follow-up cycles. It
-added 47 research cycles and 37 completed economic evaluations. Across both mechanism-first campaigns,
-the project therefore recorded 93 cycles and 73 completed economic evaluations. Negative results,
-duplicates, and attempts that never reached deterministic evaluation remained visible rather than
-being reclassified as successful strategies.
+added 47 research cycles and 37 completed economic evaluations. A third eight-hour campaign on the
+expanded 42-market regime added 29 cycles and 24 economic evaluations. Across the three
+mechanism-first campaigns, the project therefore recorded 122 cycles and 97 completed economic
+evaluations. Negative results, duplicates, and attempts that never reached deterministic evaluation
+remained visible rather than being reclassified as successful strategies.
 
 The project then tested whether its market universe was too narrow. A staged historical screen covered
 858 markets, retained 514 that passed fixed data and activity gates, retested the leading candidates
@@ -73,11 +74,17 @@ with immutable boundaries between regimes and richer event units and state in th
 The evaluator remained worker-editable and the rolling agent session still acted as director. The
 sealed future period remained untouched and no promotion run occurred.
 
+The latest campaign froze 7.4 observed days containing about 123 million normalized events across 42
+markets. A streaming Rust replay replaced whole-snapshot Python materialization and completed a full
+hash-verified pass in about two minutes with bounded retained book state. Agent implementation and
+review, rather than data loading, remained the cycle bottleneck, so a proposed resident data service
+was deferred.
+
 ## Project impact
 
 Autoresearch built a reproducible evaluation pipeline, searched broadly, exposed false premises, and
 then improved its own research method. The early phase tested 1,807 unique policy-operation variants.
-The two later mechanism-first campaigns recorded 93 cycles and completed 73 economic evaluations.
+The three mechanism-first campaigns recorded 122 cycles and completed 97 economic evaluations.
 They retained losses, causal failures, duplicates, and cycles without an evaluation rather than
 presenting only successful work.
 
@@ -85,7 +92,7 @@ Shared-capital replay then mapped several tradeoffs between profit and trading v
 portfolio budget. One newly implemented selective controller was slightly positive on the reused
 development snapshot. This was a useful discovery result, not evidence of deployable profitability.
 
-The no-wait contract sustained two long-running campaigns through 93 research cycles without admitting
+The no-wait contract sustained three long-running campaigns through 122 research cycles without admitting
 an infrastructure-only batch. This superseded the early impression that Codex could not maintain broad
 search, while confirming that a duration request alone was not enough.
 
@@ -111,7 +118,7 @@ alpha was discovered.
 ### Search for different mechanisms, not thousands of nearby settings
 
 The first phase explored 1,807 unique policy-operation variants, many of them correlated settings. The
-two later campaigns ran 93 mechanism-first cycles and completed 73 economic evaluations. One
+three later campaigns ran 122 mechanism-first cycles and completed 97 economic evaluations. One
 interaction reduced the fixed baseline loss by about 55% and beat both declared parents on its reused
 development snapshot. The follow-on campaign found additional profit-volume tradeoffs and exposed
 market-specific results that an equal-breadth aggregate had hidden.
@@ -141,6 +148,19 @@ normalized events. The 42-market collector added explicit trade units, contract 
 liquidations, and hash-bound effective configuration. The general lesson was to separate market
 discovery, policy portability, data admission, and strategy promotion instead of treating universe
 size as one switch.
+
+The later 42-market replay made the attribution more concrete. Under a fill rule capped by observed
+public-trade capacity, the original 20-market sleeve was negative while the 22 added markets drove the
+positive combined result. Nineteen of the 22 additions were positive inside the shared-capital replay,
+compared with three of the original 20. Separate sleeve replays were not additive because each sleeve
+competed for its own shared budget, but both views pointed in the same direction.
+
+The best behavior was conventional two-sided market making with simple local inventory
+diversification. Removing its adverse-selection inputs produced identical trades and economics. An
+earlier Avellaneda-Stoikov variant had underperformed simpler policies. Requiring recorded public
+trades to support the simulated fill size reduced the result materially, while a conserved partial-fill
+control remained positive on every segment of the reused 7.4-day development window. Market selection
+and execution assumptions mattered more than elaborate quoting logic in this campaign.
 
 ### Allocate model routes by research yield and cost
 
@@ -211,7 +231,7 @@ latest mechanism-first campaign confirmed this diagnosis while producing clearer
 
 Asking the agent to keep working for a long duration did not initially make it continuously test
 hypotheses. An explicit no-wait contract, route scheduler, bounded failures, atomic results, and a
-required closeout report later sustained 93 cycles across two campaigns. The problem was the operating
+required closeout report later sustained 122 cycles across three campaigns. The problem was the operating
 contract, not an inherent inability of Codex to continue research.
 
 ### Build a tool only when a specific experiment needs it
@@ -254,10 +274,11 @@ descriptions. It omits project identity, asset class, specific instruments and m
 settings, proprietary strategy mechanics, and private economics.
 
 Strategy findings came from frozen development snapshots that were each adaptively reused as later
-hypotheses responded to earlier results. The slightly positive controllers and market-specific results
-observed on those surfaces do not establish expected live returns. The 858-market attribution analysis
-also reused one touched day for feature interpretation and market admission, so it is discovery evidence
-with explicit selection bias. The evaluator remained worker-editable. The sealed future period remained
+hypotheses responded to earlier results. The latest result used 7.4 observed days and 123 million events,
+but its 42-market panel was selected through earlier discovery work. A fixed common-market policy was
+negative in aggregate across 16 older and current discovery epochs even though it beat its baseline in
+most of them. The 858-market attribution analysis also reused one touched day for feature interpretation
+and market admission. The evaluator remained worker-editable. The sealed future period remained
 untouched, no promotion or final-test run occurred, and no strategy was selected for deployment.
 
 The model-route panel was small, adaptive, and internally rated without blinding. API-equivalent costs
