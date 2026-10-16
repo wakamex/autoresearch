@@ -422,6 +422,12 @@ cadence is unresolved. Compare scheduled fresh ideation with trigger-based reset
 proposal and evaluation budgets. Measure mechanism diversity and confirmed value rather than raw idea
 count.
 
+### Forgetting narrative history may unblock search better than withholding the champion
+
+Workers that start from the current champion and the exclusion list, without prior takeaways, reflections, or experiment narratives, may make larger and more productive edits than workers that read the full ledger. Public evidence supports the mechanism: Tan et al. ([2026](https://arxiv.org/abs/2610.20563)) found that single, parallel, and communicating agents all plateaued as history accumulated, with edits shrinking and reasoning falling, and that periodically discarding every session and the candidate history while restarting from the best candidate recovered progress. From the same plateaued state, forgetting gained 4.5% to 9.2% over 30 proposals against 1.4% to 1.9% for continuing. That study used one inexpensive model and tasks where each candidate already contains its predecessors' gains.
+
+A blinded fresh start, which withholds the champion, is a different reset. It probes whether the champion is a local optimum, while forgetting history probes whether accumulated framing is making edits small. Compare them under matched budgets as one causal factor: workers given the full ledger, workers given only the champion and the exclusion list, and optionally a blinded fresh start. Keep the exclusion list in the second arm so repeated dead ends do not confound the comparison on expensive evaluators. Measure valid-improvement rate, lines changed per proposal, mechanism novelty, repeated dead ends, and confirmed value per evaluation. A rolling-context orchestrator is a second place the same anchoring can occur.
+
 ### Exact allocation and regularization rules remain under-validated
 
 Compressing correlated candidates before downstream selection is already useful as a qualified

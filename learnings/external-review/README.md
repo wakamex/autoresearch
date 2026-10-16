@@ -38,6 +38,7 @@ engineering lessons may be useful even when their claimed performance does not g
 | [Sakana AI on Darwin Gödel Machine](https://sakana.ai/dgm/) | First-party article | Open-ended search, transferable improvements, diversity, and evaluator exploitation |
 | [Curie](https://github.com/Just-Curieous/Curie) | Project documentation | End-to-end experiment rigor, verification, reproducibility, and durable reports |
 | [Autoresearch for Agents](https://github.com/hwchase17/autoresearch-agents) | Project documentation | Small direct adaptation of mutable implementation and fixed evaluator boundaries |
+| [Scaling Discovery Requires Forgetting](https://arxiv.org/abs/2610.20563) | Paper | Plateau of single, parallel, and communicating agents as history accumulates; periodic reset to the best candidate with all sessions and candidate history discarded |
 | [Prime Agent announcement](https://x.com/PrimeIntellect/status/2085094906603897057) | First-party social thread | Concise architecture and evaluation claims for persistent agent sessions |
 | [Prime Agent article](https://www.primeintellect.ai/blog/prime-agent) | First-party article | Persistent context, multi-agent communication, continual harness refinement, and reward-hacking evidence |
 | [David Gasquez on autoresearch](https://x.com/davidgasquez/status/2030946939836022886) | First-party social post | Compact claim connecting autoresearch loops to benchmarkable competition work |

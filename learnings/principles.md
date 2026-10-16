@@ -47,7 +47,7 @@ Synthesis dependencies: `trading-competitions.md`, `gpu-optimization.md`, and `a
 - Record a negative result's failure layer, surrounding structure, and named reopening condition. Close equivalent retries, but reconsider the mechanism when a prerequisite that changes its predicted cost or behavior has materially changed.
 - Deduplicate exact patches and compare behavioral signatures so repeated discovery is not mistaken for independent confirmation.
 - Compare compiled structures, reachable branches, and canonical behavior traces before treating differently named policies as independent evidence. Semantic variety that collapses to the same behavior cannot diagnose a mechanism.
-- Share accumulated takeaways during exploitation cycles, but use blinded fresh-start cycles to test for anchoring.
+- Share accumulated takeaways during exploitation cycles, but use blinded fresh-start cycles to test for anchoring. A blinded fresh start withholds the champion; it does not remove anchoring that comes from the experiment history itself (see the provisional hypothesis on forgetting narrative history).
 
 ## Evidence lifecycle
 
